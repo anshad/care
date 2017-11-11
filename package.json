@@ -17,7 +17,6 @@
     "@angular/common": "^5.0.0",
     "@angular/compiler": "^5.0.0",
     "@angular/core": "^5.0.0",
-    "@angular/flex-layout": "^2.0.0-beta.10-4905443",
     "@angular/forms": "^5.0.0",
     "@angular/http": "^5.0.0",
     "@angular/material": "^5.0.0-rc0",
@@ -25,8 +24,10 @@
     "@angular/platform-browser-dynamic": "^5.0.0",
     "@angular/router": "^5.0.0",
     "angularfire2": "^5.0.0-rc.3",
+    "bootstrap": "^4.0.0-beta.2",
     "core-js": "^2.4.1",
     "firebase": "^4.6.2",
+    "font-awesome": "^4.7.0",
     "hammerjs": "^2.0.8",
     "rxjs": "^5.5.2",
     "zone.js": "^0.8.14"
