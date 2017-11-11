@@ -2,7 +2,26 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
-import { MatToolbarModule } from '@angular/material';
+import {
+  MatToolbarModule,
+  MatInputModule,
+  MatCheckboxModule,
+  MatAutocompleteModule,
+  MatDatepickerModule,
+  MatFormFieldModule,
+  MatRadioModule,
+  MatSelectModule,
+  MatMenuModule,
+  MatSidenavModule,
+  MatListModule,
+  MatTabsModule,
+  MatCardModule,
+  MatGridListModule,
+  MatButtonModule,
+  MatIconModule,
+  MatTableModule,
+  MatDialogModule
+} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { AngularFireModule } from 'angularfire2';
@@ -18,7 +37,24 @@ import { environment } from '../environments/environment';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFirestoreModule,
     AngularFireAuthModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatInputModule,
+    MatCheckboxModule,
+    MatAutocompleteModule,
+    MatDatepickerModule,
+    MatFormFieldModule,
+    MatRadioModule,
+    MatSelectModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatListModule,
+    MatTabsModule,
+    MatCardModule,
+    MatGridListModule,
+    MatButtonModule,
+    MatIconModule,
+    MatTableModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]
