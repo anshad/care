@@ -1,1 +1,12 @@
-
+@import '../styles';
+.app-header {
+    ul {
+        li {
+            list-style: none;
+            display: inline-block;
+            a {
+                color: $white;
+            }
+        }
+    }
+}

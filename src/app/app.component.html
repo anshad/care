@@ -1,5 +1,17 @@
 <div class="app-header">
   <mat-toolbar color="primary">
     <span>Care</span>
+    <ul>
+      <li>
+        <a [routerLink]="['/appointments']">Appointments</a>
+      </li>
+      <li>
+        <a [routerLink]="['/patients']">Patients</a>
+      </li>
+      <li>
+        <a [routerLink]="['/doctors']">Doctors</a>
+      </li>
+    </ul>
   </mat-toolbar>
 </div>
+<router-outlet></router-outlet>
