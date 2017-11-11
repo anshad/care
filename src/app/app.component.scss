@@ -1,11 +1,27 @@
 @import '../styles';
 .app-header {
-    ul {
-        li {
-            list-style: none;
-            display: inline-block;
-            a {
-                color: $white;
+    .header-container {
+        width: 100%;
+    }
+    .logo-container {
+        width: 20%;
+        float: left;
+    }
+    .nav-container {
+        width: 80%;
+        float: left;
+        overflow: hidden;
+        .nav-menus {
+            margin: 0; //float: right;
+            li {
+                list-style: none;
+                display: inline-block;
+                font-size: 14px;
+                font-weight: $normal;
+                padding-right: 20px;
+                a {
+                    color: $white;
+                }
             }
         }
     }

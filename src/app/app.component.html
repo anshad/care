@@ -1,17 +1,23 @@
 <div class="app-header">
   <mat-toolbar color="primary">
-    <span>Care</span>
-    <ul>
-      <li>
-        <a [routerLink]="['/appointments']">Appointments</a>
-      </li>
-      <li>
-        <a [routerLink]="['/patients']">Patients</a>
-      </li>
-      <li>
-        <a [routerLink]="['/doctors']">Doctors</a>
-      </li>
-    </ul>
+    <div class="header-container">
+      <div class="logo-container">
+        <span class="logo">Care</span>
+      </div>
+      <div class="nav-container">
+        <ul class="nav-menus">
+          <li>
+            <a [routerLink]="['/appointments']">Appointments</a>
+          </li>
+          <li>
+            <a [routerLink]="['/patients']">Patients</a>
+          </li>
+          <li>
+            <a [routerLink]="['/doctors']">Doctors</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </mat-toolbar>
 </div>
 <router-outlet></router-outlet>
