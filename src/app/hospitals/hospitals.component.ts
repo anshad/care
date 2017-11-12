@@ -134,4 +134,9 @@ export class HospitalsComponent {
 
   myControl: FormControl = new FormControl();
   places = ['Kazhakoottam', 'Kulathur', 'Chaacka'];
+
+  filterByLocation(place) {
+    console.log(place);
+    // todo: service call
+  }
 }
