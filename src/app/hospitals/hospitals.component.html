@@ -1,3 +1,27 @@
-<p>
-  hospitals works!
-</p>
+<div class="container">
+  <div class="row">
+    <div *ngFor="let hospital of hospitals" class="col-md-3">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>{{ hospital.name }}</mat-card-title>
+          <mat-card-subtitle>{{ hospital.place }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="http://via.placeholder.com/350x150" alt="{{ hospital.name }}">
+        <mat-card-content>
+          <address>
+            <p>{{ hospital.landmark }}</p>
+            <p>{{ hospital.place }}</p>
+            <p>{{ hospital.district }}</p>
+            <p>{{ hospital.state }} - {{ hospital.postalCode }}</p>
+          </address>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button color="primary">Visit</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+
+
+  </div>
+</div>
