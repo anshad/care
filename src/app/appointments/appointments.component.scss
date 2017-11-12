@@ -1,0 +1,25 @@
+.appointments-page {
+    @media (min-width: 900px) {
+        .col-lg-1, {
+          max-width: 14.285714285714285714285714285714%;
+          flex: auto;
+        }
+      }
+    .header-image {
+        background-size: cover;
+    }
+    .col-item {
+        padding: 5px;
+        .title {
+            text-align: center;
+        }
+        .list-item {
+            background: #e9e9e9;
+            padding: 10px;
+            .mat-card {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}  
+  
