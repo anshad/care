@@ -1,23 +1,82 @@
+@import '../../styles';
 .appointments-page {
+    // background: #e9e9e9;
     @media (min-width: 900px) {
         .col-lg-1, {
-          max-width: 14.285714285714285714285714285714%;
-          flex: auto;
+            max-width: 14.285714285714285714285714285714%;
+            flex: auto;
         }
-      }
+    }
+    .appointment-content {
+        padding: 15px;
+    }
+    .mat-toolbar {
+        background: #e9e9e9;
+    }
     .header-image {
         background-size: cover;
     }
     .col-item {
-        padding: 5px;
+        padding: 0 5px;
+        padding-bottom: 0;
+        background: $white;
         .title {
             text-align: center;
+            font-size: 14px;
+        }
+        .selected {
+            color: $primary;
+        }
+        .day-over {
+            opacity: .3;
         }
         .list-item {
             background: #e9e9e9;
-            padding: 10px;
+            padding:10px 10px 0 10px;
+            height: 95%;
+            .no-card {
+                font-size: 12px;
+                color: #a19898;
+                text-align: center;
+                padding: 10px;
+                a {
+                    color: $primary;
+                }
+            }
             .mat-card {
-                margin-bottom: 10px;
+                margin-bottom: 16px;
+                padding: 0;
+                text-align: center;
+                border-bottom: 2px solid #6a4eb7;
+                .time-info {
+                    background: $primary;
+                    color: $white;
+                    padding: 2px;
+                    font-size: 12px;
+                }
+                .mat-card-content {
+                    margin-bottom: 10px;
+                    margin-top: 10px;
+                    .mat-card-avatar {
+                        height: 60px;
+                        width: 60px;
+                    }
+                    .content-info {
+                        color: #656b6c;
+                        padding-top: 2px;
+                        // padding-bottom: 3px; 
+                    }
+                }
+                .mat-card-actions {
+                    margin-bottom: 0;
+                    padding-bottom: 15px;
+                    .mat-button {
+                        margin: 4px;
+                        border: 1px solid #e9e9e9;
+                        line-height: 28px;
+                        color: #656b6c;
+                    }
+                }
             }
         }
     }
