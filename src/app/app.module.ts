@@ -33,6 +33,7 @@ import { PatientsComponent } from './patients/patients.component';
 import { AppointmentsComponent } from './appointments/appointments.component';
 import { DoctorsComponent } from './doctors/doctors.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { HospitalsComponent } from './hospitals/hospitals.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     PatientsComponent,
     AppointmentsComponent,
     DoctorsComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    HospitalsComponent
   ],
   imports: [
     BrowserModule,
