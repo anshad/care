@@ -3,10 +3,19 @@ mat-card {
     .mat-card-header-text {
         margin: 0;
     }
+    .mat-button {
+        &:hover {
+            text-decoration: none;
+        }
+    }
 }
 
 address {
     p {
         margin-bottom: 5px;
     }
+}
+
+mat-form-field {
+    float: right;
 }

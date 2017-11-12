@@ -2,8 +2,8 @@
 
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
-@import "~bootstrap/dist/css/bootstrap.min.css";
-@import "~font-awesome/css/font-awesome.css";
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import '~font-awesome/css/font-awesome.css';
 body {
     margin: 0 auto;
 }
@@ -37,4 +37,16 @@ app-root {
 .container {
     padding-top: 15px;
     max-width: 100% !important;
+}
+
+.filter-bar {
+    background-color: #e9e9e9;
+    height: 60px;
+    padding: 8px 15px;
+    form {
+        font-size: 12px;
+    }
+    mat-option {
+        font-size: 14px;
+    }
 }

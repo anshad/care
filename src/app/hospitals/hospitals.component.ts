@@ -1,4 +1,5 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
+import { FormControl } from '@angular/forms';
 
 @Component({
   selector: 'app-hospitals',
@@ -130,4 +131,7 @@ export class HospitalsComponent {
       postalCode: '695583'
     }
   ];
+
+  myControl: FormControl = new FormControl();
+  places = ['Kazhakoottam', 'Kulathur', 'Chaacka'];
 }
