@@ -1,147 +1,149 @@
+import { HospitalsService } from './hospitals.service';
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormControl } from '@angular/forms';
 
 @Component({
-  selector: 'app-hospitals',
-  templateUrl: './hospitals.component.html',
-  styleUrls: ['./hospitals.component.scss'],
-  encapsulation: ViewEncapsulation.None
+    selector: 'app-hospitals',
+    templateUrl: './hospitals.component.html',
+    styleUrls: ['./hospitals.component.scss'],
+    encapsulation: ViewEncapsulation.None,
+    providers: [HospitalsService]
 })
 export class HospitalsComponent {
-  // todo: load from service, paginated lazy loading, filters, rating header, images, map navigation link
-  hospitals = [
-    {
-      id: 1,
-      name: 'AJ Hospitals',
-      place: 'Kazhakoottam',
-      landmark: 'Main Road',
-      district: 'Thiruvananthapuram',
-      state: 'Kerala',
-      country: 'India',
-      postalCode: '695583'
-    },
-    {
-      id: 2,
-      name: 'CSI Mission Hospital',
-      place: 'Kazhakoottam',
-      landmark: 'V-kay Supermarket, Vadakkumbhagam',
-      district: 'Thiruvananthapuram',
-      state: 'Kerala',
-      country: 'India',
-      postalCode: '695583'
-    },
-    {
-      id: 3,
-      name: 'TSC Hospital',
-      place: 'Kulathur',
-      landmark: 'Bypass Road',
-      district: 'Thiruvananthapuram',
-      state: 'Kerala',
-      country: 'India',
-      postalCode: '695583'
-    },
-    {
-      id: 1,
-      name: 'AJ Hospitals',
-      place: 'Kazhakoottam',
-      landmark: 'Main Road',
-      district: 'Thiruvananthapuram',
-      state: 'Kerala',
-      country: 'India',
-      postalCode: '695583'
-    },
-    {
-      id: 2,
-      name: 'CSI Mission Hospital',
-      place: 'Kazhakoottam',
-      landmark: 'V-kay Supermarket, Vadakkumbhagam',
-      district: 'Thiruvananthapuram',
-      state: 'Kerala',
-      country: 'India',
-      postalCode: '695583'
-    },
-    {
-      id: 3,
-      name: 'TSC Hospital',
-      place: 'Kulathur',
-      landmark: 'Bypass Road',
-      district: 'Thiruvananthapuram',
-      state: 'Kerala',
-      country: 'India',
-      postalCode: '695583'
-    },
-    {
-      id: 1,
-      name: 'AJ Hospitals',
-      place: 'Kazhakoottam',
-      landmark: 'Main Road',
-      district: 'Thiruvananthapuram',
-      state: 'Kerala',
-      country: 'India',
-      postalCode: '695583'
-    },
-    {
-      id: 2,
-      name: 'CSI Mission Hospital',
-      place: 'Kazhakoottam',
-      landmark: 'V-kay Supermarket, Vadakkumbhagam',
-      district: 'Thiruvananthapuram',
-      state: 'Kerala',
-      country: 'India',
-      postalCode: '695583'
-    },
-    {
-      id: 3,
-      name: 'TSC Hospital',
-      place: 'Kulathur',
-      landmark: 'Bypass Road',
-      district: 'Thiruvananthapuram',
-      state: 'Kerala',
-      country: 'India',
-      postalCode: '695583'
-    },
-    {
-      id: 1,
-      name: 'AJ Hospitals',
-      place: 'Kazhakoottam',
-      landmark: 'Main Road',
-      district: 'Thiruvananthapuram',
-      state: 'Kerala',
-      country: 'India',
-      postalCode: '695583'
-    },
-    {
-      id: 2,
-      name: 'CSI Mission Hospital',
-      place: 'Kazhakoottam',
-      landmark: 'V-kay Supermarket, Vadakkumbhagam',
-      district: 'Thiruvananthapuram',
-      state: 'Kerala',
-      country: 'India',
-      postalCode: '695583'
-    },
-    {
-      id: 3,
-      name: 'TSC Hospital',
-      place: 'Kulathur',
-      landmark: 'Bypass Road',
-      district: 'Thiruvananthapuram',
-      state: 'Kerala',
-      country: 'India',
-      postalCode: '695583'
+    // todo: load from service, paginated lazy loading, filters, rating header, images, map navigation link
+    hospitals = [
+        {
+            id: 1,
+            name: 'AJ Hospitals',
+            place: 'Kazhakoottam',
+            landmark: 'Main Road',
+            district: 'Thiruvananthapuram',
+            state: 'Kerala',
+            country: 'India',
+            postalCode: '695583'
+        },
+        {
+            id: 2,
+            name: 'CSI Mission Hospital',
+            place: 'Kazhakoottam',
+            landmark: 'V-kay Supermarket, Vadakkumbhagam',
+            district: 'Thiruvananthapuram',
+            state: 'Kerala',
+            country: 'India',
+            postalCode: '695583'
+        },
+        {
+            id: 3,
+            name: 'TSC Hospital',
+            place: 'Kulathur',
+            landmark: 'Bypass Road',
+            district: 'Thiruvananthapuram',
+            state: 'Kerala',
+            country: 'India',
+            postalCode: '695583'
+        },
+        {
+            id: 1,
+            name: 'AJ Hospitals',
+            place: 'Kazhakoottam',
+            landmark: 'Main Road',
+            district: 'Thiruvananthapuram',
+            state: 'Kerala',
+            country: 'India',
+            postalCode: '695583'
+        },
+        {
+            id: 2,
+            name: 'CSI Mission Hospital',
+            place: 'Kazhakoottam',
+            landmark: 'V-kay Supermarket, Vadakkumbhagam',
+            district: 'Thiruvananthapuram',
+            state: 'Kerala',
+            country: 'India',
+            postalCode: '695583'
+        },
+        {
+            id: 3,
+            name: 'TSC Hospital',
+            place: 'Kulathur',
+            landmark: 'Bypass Road',
+            district: 'Thiruvananthapuram',
+            state: 'Kerala',
+            country: 'India',
+            postalCode: '695583'
+        },
+        {
+            id: 1,
+            name: 'AJ Hospitals',
+            place: 'Kazhakoottam',
+            landmark: 'Main Road',
+            district: 'Thiruvananthapuram',
+            state: 'Kerala',
+            country: 'India',
+            postalCode: '695583'
+        },
+        {
+            id: 2,
+            name: 'CSI Mission Hospital',
+            place: 'Kazhakoottam',
+            landmark: 'V-kay Supermarket, Vadakkumbhagam',
+            district: 'Thiruvananthapuram',
+            state: 'Kerala',
+            country: 'India',
+            postalCode: '695583'
+        },
+        {
+            id: 3,
+            name: 'TSC Hospital',
+            place: 'Kulathur',
+            landmark: 'Bypass Road',
+            district: 'Thiruvananthapuram',
+            state: 'Kerala',
+            country: 'India',
+            postalCode: '695583'
+        },
+        {
+            id: 1,
+            name: 'AJ Hospitals',
+            place: 'Kazhakoottam',
+            landmark: 'Main Road',
+            district: 'Thiruvananthapuram',
+            state: 'Kerala',
+            country: 'India',
+            postalCode: '695583'
+        },
+        {
+            id: 2,
+            name: 'CSI Mission Hospital',
+            place: 'Kazhakoottam',
+            landmark: 'V-kay Supermarket, Vadakkumbhagam',
+            district: 'Thiruvananthapuram',
+            state: 'Kerala',
+            country: 'India',
+            postalCode: '695583'
+        },
+        {
+            id: 3,
+            name: 'TSC Hospital',
+            place: 'Kulathur',
+            landmark: 'Bypass Road',
+            district: 'Thiruvananthapuram',
+            state: 'Kerala',
+            country: 'India',
+            postalCode: '695583'
+        }
+    ];
+    public myControl: FormControl = new FormControl('');
+
+    places = ['Kazhakoottam', 'Kulathur', 'Chaacka'];
+
+    filterByLocation(place) {
+        console.log(place);
+        // todo: service call
     }
-  ];
-  public myControl: FormControl = new FormControl('');
 
-  places = ['Kazhakoottam', 'Kulathur', 'Chaacka'];
-
-  filterByLocation(place) {
-    console.log(place);
-    // todo: service call
-  }
-
-  // public someFn(): void {
-  //   const value = this.myControl.value;
-  //   console.log('value');
-  // }
+    // public someFn(): void {
+    //   const value = this.myControl.value;
+    //   console.log('value');
+    // }
 }
