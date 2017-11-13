@@ -1,22 +1,29 @@
+@import '../../styles';
 mat-card {
-  margin-bottom: 30px;
-  .mat-card-header-text {
-    margin: 0;
-  }
-  .mat-button {
-    &:hover {
-      text-decoration: none;
+    margin-bottom: 30px;
+    .mat-card-header-text {
+        margin: 0;
     }
-  }
-  border-bottom: 2px solid #673ab7;
+    .mat-button {
+        &:hover {
+            text-decoration: none;
+        }
+    }
+    border-bottom: 2px solid $primary;
 }
 
 address {
-  p {
-    margin-bottom: 5px;
-  }
+    p {
+        margin-bottom: 5px;
+    }
 }
 
-mat-form-field {
-  float: right;
+form {
+    float: right;
+    text-align: right;
+    mat-form-field {
+        &:first-child {
+            margin-right: 25px;
+        }
+    }
 }

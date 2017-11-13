@@ -1,18 +1,14 @@
-/* You can add global styles to this file, and also import other style files */
-
+// imports
 @import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import '~font-awesome/css/font-awesome.css';
-body {
-    margin: 0 auto;
-}
-
+// colors
 $white: #ffffff;
 $tuna: #1f222e;
 $athens-gray: #f2f3f7;
 $primary: #6a4eb7;
-
+// font family
 $montserrat-font: Montserrat,
 'Helvetica Neue',
 'Lucida Grande',
@@ -25,13 +21,18 @@ $open-font: 'Open Sans',
 Arial,
 Verdana,
 sans-serif;
-// Font weight
+// font weight
 $slim: 100;
 $light: 300;
 $normal: 400;
 $medium: 500;
 $semi-bold: 600;
 $bold: 700;
+// common styles
+body {
+    margin: 0 auto;
+}
+
 app-root {
     height: 100vh;
 }

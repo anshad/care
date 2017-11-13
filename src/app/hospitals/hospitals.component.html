@@ -2,6 +2,17 @@
 <div class="filter-bar">
   <!-- filters -->
   <form>
+    <!-- department filter -->
+    <mat-form-field>
+      <input type="text" placeholder="Filter by department" aria-label="Place" matInput [formControl]="myControl" [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete">
+        <!--(optionSelected)="someFn()" -->
+        <mat-option *ngFor="let place of places" [value]="place" (onSelectionChange)="filterByLocation(place)">
+          {{ place }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+    <!-- location filter -->
     <mat-form-field>
       <input type="text" placeholder="Filter by location" aria-label="Place" matInput [formControl]="myControl" [matAutocomplete]="auto">
       <mat-autocomplete #auto="matAutocomplete">
