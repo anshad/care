@@ -131,12 +131,17 @@ export class HospitalsComponent {
       postalCode: '695583'
     }
   ];
+  public myControl: FormControl = new FormControl('');
 
-  myControl: FormControl = new FormControl();
   places = ['Kazhakoottam', 'Kulathur', 'Chaacka'];
 
   filterByLocation(place) {
     console.log(place);
     // todo: service call
   }
+
+  // public someFn(): void {
+  //   const value = this.myControl.value;
+  //   console.log('value');
+  // }
 }

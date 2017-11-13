@@ -1,22 +1,22 @@
+<!-- filter header -->
 <div class="filter-bar">
-
-
+  <!-- filters -->
   <form>
     <mat-form-field>
       <input type="text" placeholder="Filter by location" aria-label="Place" matInput [formControl]="myControl" [matAutocomplete]="auto">
       <mat-autocomplete #auto="matAutocomplete">
+        <!--(optionSelected)="someFn()" -->
         <mat-option *ngFor="let place of places" [value]="place" (onSelectionChange)="filterByLocation(place)">
           {{ place }}
         </mat-option>
       </mat-autocomplete>
     </mat-form-field>
   </form>
-
-
-
 </div>
+<!-- contents -->
 <div class="container">
   <div class="row">
+    <!-- hospital cards -->
     <div *ngFor="let hospital of hospitals" class="col-md-3">
       <mat-card>
         <mat-card-header>
@@ -38,8 +38,6 @@
         </mat-card-actions>
       </mat-card>
     </div>
-
-
-
+    <!-- end hospitals -->
   </div>
 </div>
