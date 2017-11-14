@@ -1,4 +1,11 @@
-<mat-toolbar>Appointments</mat-toolbar>
+<mat-toolbar>Appointments 
+	<div class="appoint-date-picker">
+				<my-date-range-picker name="mydaterange" [options]="myDateRangePickerOptions"
+							[(ngModel)]="model" required>
+				</my-date-range-picker>
+	</div>
+	
+</mat-toolbar>
 <div class="container-fluid appointments-page">
   	<div class="row appointment-content">
 		<div class="col-lg-1 col-md-4 col-sm-6 col-xs-6 col-item">

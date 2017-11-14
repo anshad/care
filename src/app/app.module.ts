@@ -1,5 +1,6 @@
 import { AngularFireDatabaseModule } from 'angularfire2/database-deprecated';
 import { BrowserModule } from '@angular/platform-browser';
+import { MyDateRangePickerModule } from 'mydaterangepicker';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
@@ -75,7 +76,8 @@ import { LoginComponent } from './login/login.component';
         MatButtonModule,
         MatIconModule,
         MatTableModule,
-        MatDialogModule
+        MatDialogModule,
+        MyDateRangePickerModule
     ],
     providers: [],
     bootstrap: [AppComponent]
