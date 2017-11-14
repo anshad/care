@@ -5,7 +5,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-
 import {
     MatToolbarModule,
     MatInputModule,
@@ -38,7 +37,9 @@ import { DoctorsComponent } from './doctors/doctors.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HospitalsComponent } from './hospitals/hospitals.component';
 import { LoginComponent } from './login/login.component';
-
+import { ScheduleComponent } from './schedule/schedule.component';
+import { HospitalDetailsComponent } from './hospital-details/hospital-details.component';
+import { BookingConfirmComponent } from './booking-confirm/booking-confirm.component';
 @NgModule({
     declarations: [
         AppComponent,
@@ -47,7 +48,10 @@ import { LoginComponent } from './login/login.component';
         DoctorsComponent,
         PageNotFoundComponent,
         HospitalsComponent,
-        LoginComponent
+        LoginComponent,
+        ScheduleComponent,
+        HospitalDetailsComponent,
+        BookingConfirmComponent
     ],
     imports: [
         BrowserModule,

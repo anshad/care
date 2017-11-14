@@ -1,0 +1,18 @@
+/* Form */
+
+@import '../../styles';
+button {
+    outline: 0;
+    background: $primary;
+    border: 0;
+    padding: 6px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px;
+    color: #ffffff;
+    font-size: 14px;
+    -webkit-transition: all 0.3 ease;
+    transition: all 0.3 ease;
+    cursor: pointer;
+}
