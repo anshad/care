@@ -38,6 +38,7 @@ import { DoctorsComponent } from './doctors/doctors.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HospitalsComponent } from './hospitals/hospitals.component';
 import { LoginComponent } from './login/login.component';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
 
 @NgModule({
     declarations: [
@@ -77,6 +78,7 @@ import { LoginComponent } from './login/login.component';
         MatIconModule,
         MatTableModule,
         MatDialogModule,
+        MatMomentDateModule,
         MyDateRangePickerModule
     ],
     providers: [],
