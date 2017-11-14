@@ -2,8 +2,16 @@ import { Hospital } from './hospital';
 // import { environment } from './../../environments/environment.prod';
 import { Injectable } from '@angular/core';
 import { Observable, Subscribable } from 'rxjs/Observable';
+import { BehaviorSubject } from 'rxjs/BehaviorSubject';
+import { Subscription } from 'rxjs/Subscription';
+import 'rxjs/add/operator/switchMap';
 // import { Http } from '@angular/http';
-import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
+import {
+    AngularFireDatabase,
+    AngularFireList,
+    AngularFireAction
+} from 'angularfire2/database';
+import * as firebase from 'firebase';
 
 /**
  * Hospital service or db adapter
@@ -24,6 +32,22 @@ export class HospitalsService {
          * get hospital db ref
          */
         this.hospitalsRef = this.db.list('hospitals');
+    }
+
+    /**
+     * Filter hospital by a location
+     * @param place
+     */
+    filterBy(place: string | null): Observable<any[]> {
+        return this.db
+            .list('/hospitals', ref => ref.orderByChild('place').equalTo(place))
+            .snapshotChanges()
+            .map(changes => {
+                return changes.map(c => ({
+                    key: c.payload.key,
+                    ...c.payload.val()
+                }));
+            });
     }
 
     /**

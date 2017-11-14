@@ -23,7 +23,7 @@ export class HospitalsComponent implements OnInit {
     /**
      * Place list for filter
      */
-    places = ['Kazhakoottam', 'Kulathur', 'Chaacka'];
+    places = ['Kazhakoottam', 'Kulathur', 'Pattom'];
 
     /**
     * Hospitals list
@@ -51,6 +51,9 @@ export class HospitalsComponent implements OnInit {
      */
     filterByLocation(place) {
         console.log(place);
+        this.hospitalsService.filterBy(place).subscribe(result => {
+            console.log(result);
+        });
     }
 
     // public filterByLocation(): void {
