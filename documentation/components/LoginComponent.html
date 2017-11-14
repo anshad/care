@@ -97,7 +97,7 @@
                                     <a href="../components/HospitalsComponent.html" >HospitalsComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/LoginComponent.html" >LoginComponent</a>
+                                    <a href="../components/LoginComponent.html"  data-type="entity-link" class="active" >LoginComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/PageNotFoundComponent.html" >PageNotFoundComponent</a>
@@ -151,7 +151,7 @@
                                 id="xs-miscellaneous-links"
                             >
                                 <li class="link">
-                                  <a href="../miscellaneous/variables.html" data-type="entity-link"  class="active" >Variables</a>
+                                  <a href="../miscellaneous/variables.html" data-type="entity-link" >Variables</a>
                                 </li>
                         </ul>
                     </li>
@@ -258,7 +258,7 @@
                                            <a href="../components/HospitalsComponent.html" >HospitalsComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/LoginComponent.html" >LoginComponent</a>
+                                           <a href="../components/LoginComponent.html"  data-type="entity-link" class="active" >LoginComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/PageNotFoundComponent.html" >PageNotFoundComponent</a>
@@ -312,7 +312,7 @@
                                        id="miscellaneous-links"
                    >
                                        <li class="link">
-                                         <a href="../miscellaneous/variables.html" data-type="entity-link"  class="active" >Variables</a>
+                                         <a href="../miscellaneous/variables.html" data-type="entity-link" >Variables</a>
                                        </li>
                                </ul>
                            </li>
@@ -336,98 +336,348 @@
                    
                    </nav>
                </div>
-               <div class="content miscellaneous-variables">
+               <div class="content component">
                    <div class="content-data">
 
 
 
 
-
-
-
-
-
-
-
-
 <ol class="breadcrumb">
-  <li>Miscellaneous - Variables</li>
+  <li>Components</li>
+  <li>LoginComponent</li>
 </ol>
 
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active">
+        <a href="#info" id="info-tab" role="tab" data-toggle="tab" data-link="info">Info</a>
+    </li>
+
+    <li>
+        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+    </li>
+
+    <li>
+        <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+    </li>
+    <li>
+        <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/login/login.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/docs/ts/latest/api/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
 <section>
-    <h3 id="index">Index</h3>
-    <table class="table table-sm table-bordered index-table">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
         <tbody>
+
+
             <tr>
-                <td class="col-md-4">
-                    <ul class="index-list">
-                        <li>
-                            <a href="#environment">environment</a>
-                        </li>
-                        <li>
-                            <a href="#environment">environment</a>
-                        </li>
-                    </ul>
-                </td>
+                <td class="col-md-3">encapsulation</td>
+                <td class="col-md-9"><code>ViewEncapsulation.None</code></td>
             </tr>
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-login</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>login.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./login.component.html</code></td>
+            </tr>
+
+
         </tbody>
     </table>
 </section>
 
-    <h3>src/environments/environment.prod.ts</h3>
     <section>
-        <h3></h3>        <table class="table table-sm table-bordered">
+        <h3 id="index">Index</h3>
+        <table class="table table-sm table-bordered index-table">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                 <a href="#loginForm">loginForm</a>
+                            </li>
+                            <li>
+                                 <a href="#showNav">showNav</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                 <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h3 id="constructor">Constructor</h3>
+            <table class="table table-sm table-bordered">
                 <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <a name="environment"></a>
-                            <span class="name"><b> environment</b><a href="#environment"><span class="fa fa-link"></span></a></span>
+                            <code>constructor()</code>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/login/login.component.ts:9</a></div>
+                                </td>
+                            </tr>
+    
+                </tbody>
+            </table>
+    </section>
+
+
+
+
+
+    <section>
+        
+            <h3 id="methods">
+                Methods
+            </h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="ngOnInit"></a>
+                            <span class="name"><b> ngOnInit</b><a href="#ngOnInit"><span class="fa fa-link"></span></a></span>
                         </td>
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <code>environment:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+    <code>ngOnInit()</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/login/login.component.ts:13</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </section>
+
+    <section>
+        
+            <h3 id="inputs">
+                Properties
+            </h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="loginForm"></a>
+                            <span class="name"><b> loginForm</b><a href="#loginForm"><span class="fa fa-link"></span></a></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>loginForm:     <code></code>
     </code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
-    
+                                <i>Default value : </i><code>true</code>
                             </td>
                         </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/login/login.component.ts:16</a></div>
+                                </td>
+                            </tr>
     
     
                 </tbody>
             </table>
-    </section>
-    <h3>src/environments/environment.ts</h3>
-    <section>
-        <h3></h3>        <table class="table table-sm table-bordered">
+            <table class="table table-sm table-bordered">
                 <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <a name="environment"></a>
-                            <span class="name"><b> environment</b><a href="#environment"><span class="fa fa-link"></span></a></span>
+                            <a name="showNav"></a>
+                            <span class="name"><b> showNav</b><a href="#showNav"><span class="fa fa-link"></span></a></span>
                         </td>
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <code>environment:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+                            <code>showNav:     <code></code>
     </code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
-    
+                                <i>Default value : </i><code>true</code>
                             </td>
                         </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/login/login.component.ts:15</a></div>
+                                </td>
+                            </tr>
     
     
                 </tbody>
             </table>
     </section>
+
+</div>
+
+
+    <div class="tab-pane fade tab-source-code" id="source">
+        <pre class="line-numbers"><code class="language-typescript">import { Component, OnInit, ViewEncapsulation } from &#x27;@angular/core&#x27;;
+
+@Component({
+  selector: &#x27;app-login&#x27;,
+  templateUrl: &#x27;./login.component.html&#x27;,
+  styleUrls: [&#x27;./login.component.scss&#x27;],
+  encapsulation: ViewEncapsulation.None
+})
+export class LoginComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+  showNav  &#x3D; true;
+  loginForm &#x3D; true;
+
+
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade" id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;main-div&quot;&gt;
+  &lt;div class&#x3D;&quot;form&quot;&gt;
+      &lt;div class&#x3D;&quot;col-xs-12&quot;&gt;
+          &lt;img class&#x3D;&quot;img-responsive&quot; src&#x3D;&quot;&quot; alt&#x3D;&quot;Logo&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class&#x3D;&quot;info col-xs-12&quot;&gt;
+          &lt;span &gt; Made with &lt;i class&#x3D;&quot;fa fa-heart&quot;&gt;&lt;/i&gt; By &lt;a href&#x3D;&quot;https://Betasquirrel.com&quot; target&#x3D;&quot;_blank&quot;&gt;Betasquirrel&lt;/a&gt;&lt;/span&gt;
+      &lt;/div&gt;
+      &lt;form *ngIf&#x3D;&quot;!loginForm&quot;&gt;
+          &lt;input type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;name&quot; autocomplete&#x3D;&quot;off&quot; /&gt;
+          &lt;input type&#x3D;&quot;password&quot; placeholder&#x3D;&quot;password&quot; autocomplete&#x3D;&quot;off&quot; /&gt;
+          &lt;input type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;email address&quot; autocomplete&#x3D;&quot;off&quot; /&gt;
+          &lt;input type&#x3D;&quot;tel&quot; placeholder&#x3D;&quot;phone no&quot; autocomplete&#x3D;&quot;off&quot; /&gt;
+          &lt;button&gt;create&lt;/button&gt;
+          &lt;p class&#x3D;&quot;message&quot;&gt;Already registered? &lt;span (click)&#x3D;&quot;loginForm &#x3D; !loginForm&quot;&gt;Sign In&lt;/span&gt;&lt;/p&gt;
+      &lt;/form&gt;
+      &lt;form *ngIf&#x3D;&quot;loginForm&quot; class&#x3D;&quot;login-form&quot; autocomplete&#x3D;&quot;off&quot;&gt;
+          &lt;input type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;user name&quot; ng-model&#x3D;&quot;loginUser.email&quot; /&gt;
+          &lt;input type&#x3D;&quot;password&quot; placeholder&#x3D;&quot;password&quot; ng-model&#x3D;&quot;loginUser.password&quot; /&gt;
+          &lt;button ng-click&#x3D;&quot;login()&quot;&gt;Login&lt;/button&gt;
+          &lt;p class&#x3D;&quot;message&quot;&gt;Not registered? &lt;span (click)&#x3D;&quot;loginForm &#x3D; !loginForm&quot;&gt;Create an account&lt;/span&gt;&lt;/p&gt;
+      &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/div&gt;</code></pre>
+    </div>
+
+    <div class="tab-pane fade" id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="main-div">  <div class="form">      <div class="col-xs-12">          <img class="img-responsive" src="" alt="Logo">      </div>      <div class="info col-xs-12">          <span > Made with <i class="fa fa-heart"></i> By <a href="https://Betasquirrel.com" target="_blank">Betasquirrel</a></span>      </div>      <form *ngIf="!loginForm">          <input type="text" placeholder="name" autocomplete="off" />          <input type="password" placeholder="password" autocomplete="off" />          <input type="text" placeholder="email address" autocomplete="off" />          <input type="tel" placeholder="phone no" autocomplete="off" />          <button>create</button>          <p class="message">Already registered? <span (click)="loginForm = !loginForm">Sign In</span></p>      </form>      <form *ngIf="loginForm" class="login-form" autocomplete="off">          <input type="text" placeholder="user name" ng-model="loginUser.email" />          <input type="password" placeholder="password" ng-model="loginUser.password" />          <button ng-click="login()">Login</button>          <p class="message">Not registered? <span (click)="loginForm = !loginForm">Create an account</span></p>      </form>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppointmentsComponent', 'selector': 'app-appointments'},{'name': 'DoctorsComponent', 'selector': 'app-doctors'},{'name': 'HospitalsComponent', 'selector': 'app-hospitals'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'PatientsComponent', 'selector': 'app-patients'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'LoginComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
 
 
                    </div><div class="search-results">

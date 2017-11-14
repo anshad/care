@@ -1,0 +1,55 @@
+{
+    "h1": {
+        "id": 1,
+        "name": "AJ Hospitals",
+        "place": "Kazhakkoottam",
+        "landmark": "Main Road",
+        "district": "Trivandrum",
+        "state": "Kerala",
+        "postalCode": "695583"
+    },
+    "h2": {
+        "id": 2,
+        "name": "TSC Hospital",
+        "place": "Kulathur",
+        "landmark": "Bypass Road",
+        "district": "Trivandrum",
+        "state": "Kerala",
+        "postalCode": "695583"
+    },
+    "h3": {
+        "id": 3,
+        "name": "CSI Mission Hospital",
+        "place": "Kazhakkoottam",
+        "landmark": "Main Road",
+        "district": "Trivandrum",
+        "state": "Kerala",
+        "postalCode": "695583"
+    },
+    "h4": {
+        "id": 4,
+        "name": "Nirmala Hospital",
+        "place": "Vettukadu",
+        "landmark": "Veli",
+        "district": "Trivandrum",
+        "state": "Kerala"
+    },
+    "h5": {
+        "id": 5,
+        "name": "Meditrina Hospital",
+        "place": "Pattom",
+        "landmark": "Pattom Palace",
+        "district": "Trivandrum",
+        "state": "Kerala",
+        "postalCode": "695583"
+    },
+    "h6": {
+        "id": 6,
+        "name": "Lords Hospital",
+        "place": "Venpalavattom",
+        "landmark": "Main Road",
+        "district": "Trivandrum",
+        "state": "Kerala",
+        "postalCode": "695583"
+    }
+}

@@ -40,6 +40,8 @@ import { LoginComponent } from './login/login.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { HospitalDetailsComponent } from './hospital-details/hospital-details.component';
 import { BookingConfirmComponent } from './booking-confirm/booking-confirm.component';
+import { MatMomentDateModule } from '@angular/material-moment-adapter';
+
 @NgModule({
     declarations: [
         AppComponent,
@@ -81,6 +83,7 @@ import { BookingConfirmComponent } from './booking-confirm/booking-confirm.compo
         MatIconModule,
         MatTableModule,
         MatDialogModule,
+        MatMomentDateModule,
         MyDateRangePickerModule
     ],
     providers: [],
