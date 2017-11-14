@@ -1,3 +1,4 @@
+import { Hospital } from './hospital';
 // import { environment } from './../../environments/environment.prod';
 import { Injectable } from '@angular/core';
 import { Observable, Subscribable } from 'rxjs/Observable';
@@ -43,12 +44,79 @@ export class HospitalsService {
      * Get subscribable hospital list with key
      */
     getKeyedList(): Subscribable<any> {
-        return this.db
-            .object('hospitals')
+        return this.getHospitalRef()
             .snapshotChanges()
-            .map(action => {
-                const data = action.payload.toJSON();
-                return data;
+            .map(changes => {
+                return changes.map(c => ({
+                    key: c.payload.key,
+                    ...c.payload.val()
+                }));
             });
+    }
+
+    /**
+     * Add new hospital
+     * @param name name of the hospital
+     * @param location location
+     * @param landmark landmarh
+     * @param district district
+     * @param state state
+     * @param postalCode postal code
+     */
+    addHospital(
+        name: string,
+        place: string,
+        landmark: string,
+        district: string,
+        state: string,
+        postalCode: string
+    ) {
+        this.getHospitalRef().push({
+            name: name,
+            place: place,
+            landmark: landmark,
+            district: district,
+            state: state,
+            postalCode: postalCode
+        });
+    }
+
+    /**
+     * Update hospital
+     * @param key hospital key
+     * @param name updated name
+     */
+    updateHospital(
+        key: string,
+        name: string,
+        place: string,
+        landmark: string,
+        district: string,
+        state: string,
+        postalCode: string
+    ) {
+        this.getHospitalRef().update(key, {
+            name: name,
+            place: place,
+            landmark: landmark,
+            district: district,
+            state: state,
+            postalCode: postalCode
+        });
+    }
+
+    /**
+     * Delete hospital
+     * @param key hospital key
+     */
+    deleteHospital(key: string) {
+        this.getHospitalRef().remove(key);
+    }
+
+    /**
+     * Remove all hospitals
+     */
+    deleteAllHospitals() {
+        this.getHospitalRef().remove();
     }
 }

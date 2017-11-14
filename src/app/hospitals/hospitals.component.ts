@@ -31,11 +31,6 @@ export class HospitalsComponent implements OnInit {
     hospitals: Observable<any[]>;
 
     /**
-     * Hospital list with key
-     */
-    hospitalList: Array<any> = [];
-
-    /**
      * Component constructor
      * @param hospitalsService
      */
@@ -51,6 +46,7 @@ export class HospitalsComponent implements OnInit {
 
     /**
      * Filter hospitals by location
+     * TODO: Filter the data by passing filter params
      * @param place
      */
     filterByLocation(place) {
@@ -63,6 +59,7 @@ export class HospitalsComponent implements OnInit {
 
     /**
      * Load single hospital details
+     * TODO: Load hospital details to new view by calling firebase service (get review and all)
      * @param hospital
      */
     loadHospitalDetails(hospital) {
@@ -74,9 +71,7 @@ export class HospitalsComponent implements OnInit {
      */
     getHospitalListWithKey() {
         this.hospitalsService.getKeyedList().subscribe(result => {
-            Object.keys(result).map(key => {
-                this.hospitalList.push({ key: key, data: result[key] });
-            });
+            this.hospitals = result;
         });
     }
 }
