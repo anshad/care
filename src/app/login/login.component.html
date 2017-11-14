@@ -1,0 +1,23 @@
+<div class="main-div">
+  <div class="form">
+      <div class="col-xs-12">
+          <img class="img-responsive" src="" alt="Logo">
+      </div>
+      <div class="info col-xs-12">
+          <span > Made with <i class="fa fa-heart"></i> By <a href="https://Betasquirrel.com" target="_blank">Betasquirrel</a></span>
+      </div>
+      <form *ngIf="!loginForm">
+          <input type="text" placeholder="name" autocomplete="off" />
+          <input type="password" placeholder="password" autocomplete="off" />
+          <input type="text" placeholder="email address" autocomplete="off" />
+          <button>create</button>
+          <p class="message">Already registered? <span (click)="loginForm = !loginForm">Sign In</span></p>
+      </form>
+      <form *ngIf="loginForm" class="login-form" autocomplete="off">
+          <input type="text" placeholder="user name" ng-model="loginUser.email" />
+          <input type="password" placeholder="password" ng-model="loginUser.password" />
+          <button ng-click="login()">Login</button>
+          <p class="message">Not registered? <span (click)="loginForm = !loginForm">Create an account</span></p>
+      </form>
+  </div>
+</div>
