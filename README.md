@@ -14,6 +14,10 @@ A patient/hospital portal generated with [Angular CLI](https://github.com/angula
 * Run end-to-end test - `ng e2e`
 * Code scaffolding `ng generate directive|pipe|service|class|guard|interface|enum|module`
 
+## Code Documentation
+
+[Read Doc](https://anshad.github.io/care/)
+
 ## Todo
 
 * Progress spinner for service calls
