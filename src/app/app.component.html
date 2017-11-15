@@ -1,30 +1,36 @@
-<div class="app-header mat-elevation-z6" *ngIf="router.url != '/login'">
-  <mat-toolbar color="primary">
-    <div class="header-container">
-      <!-- logo -->
-      <div class="logo-container">
-        <span class="logo" [routerLink]="['/hospitals']">
-          Care
-        </span>
-      </div>
-      <!-- nav menu -->
-      <div class="nav-container">
-        <ul class="nav-menus">
-          <li>
-            <a [routerLink]="['/appointments']">Appointments</a>
-          </li>
-          <li>
-            <a [routerLink]="['/patients']">Patients</a>
-          </li>
-          <li>
-            <a [routerLink]="['/hospitals']">Hospitals</a>
-          </li>
-          <li>
-            <a [routerLink]="['/doctors']">Doctors</a>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </mat-toolbar>
+<div
+    class="app-header mat-elevation-z6"
+    *ngIf="_router.url != '/login'"
+>
+    <mat-toolbar color="primary">
+        <div class="header-container">
+            <!-- logo -->
+            <div class="logo-container">
+                <span
+                    class="logo"
+                    [routerLink]="['/hospitals']"
+                >
+                    Care
+                </span>
+            </div>
+            <!-- nav menu -->
+            <div class="nav-container">
+                <ul class="nav-menus">
+                    <li>
+                        <a [routerLink]="['/appointments']">Appointments</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/patients']">Patients</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/hospitals']">Hospitals</a>
+                    </li>
+                    <li>
+                        <a [routerLink]="['/doctors']">Doctors</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </mat-toolbar>
 </div>
 <router-outlet></router-outlet>
