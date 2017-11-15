@@ -1,27 +1,26 @@
 language: node_js
 node_js:
-  - "6.9"
-
+- '6.9'
 branches:
   only:
-    - master
-
+  - master
 before_script:
-  - npm install -g firebase-tools
-  - npm install -g @angular/cli
-  - npm install -g @compodoc/compodoc
-  - npm install -g angular-cli-ghpages
-
+- npm install -g firebase-tools
+- npm install -g @angular/cli
+- npm install -g @compodoc/compodoc
+- npm install -g angular-cli-ghpages
 script:
-  - npm install
-  - ng build --prod
-  - compodoc -p src/tsconfig.app.json
-  - ngh --dir "documentation" --no-silent
-
+- npm install
+- ng build --prod
+- compodoc -p src/tsconfig.app.json
+- ngh --dir "documentation" --repo=https://VU/NCkzNi+Y7DERjQEpX7TIqMYvek9hegk8MsTA3boTSUDtjtViFsT/UdLJtGylp2w9y1JaGQhGMZURVLKKGZEqP6GdDlRynRUMPPfJXexSJNFk+n2AkgU4s2yK45H486O4TiqiJq5nFpcusVaCRNsUMdqImut/ScFlv+CPwtgQV6BHDYGHUkWfG61m+d7hLhDKU6ozD4pxugTH4qA6agRs5GxdTcmMAePCC0VsBalXY13CtO7SvhRlcZseJDoxTDVeOzkZn5lMk8NM+0P8VRH5tmUKt9OcoOMAnzFeFAp0vo8B8x7jjXQkF2Hc7KMYDdkW4NgnSKFcScaUOtG4UTzvHIn4523KxCx4xAGvVVHvMobv604lpzNGnwG1KUoYrnkJju1UBbUdtfgRhqjIymVBLiDCTyc4qiEv6xS9po+FAaM91JnSSQUvbrxtOGiN6PU9Krsl6MpWbhg4aY2F0eCAkC3v+cXFycqOR6KvTh2v3aiEuLE4lEVUzWQW3xOIsPvUvpiUlnO7+B8OnDpZ7ybX1Idk42BXq6Xdm/j4KRS4Awkixl1XrHaCPmTqWa9fLAu08oZuxppbUc4en0/MczmK9/dfspKD7V06gJX9fUj0Q0uRyqRyNK8qAdiCSOS1IygH3+42WvlJ091Cf/zYL2BEUSIgvNiInLSKz7+NChws=@github.com/anshad/care.git --name="Anshad Vattapoyil" --email=anshad.musafir@gmail.com
 after_success:
-  - firebase deploy --token $FIREBASE_TOKEN
-
+- firebase deploy --token $FIREBASE_TOKEN
 notifications:
   email:
     on_failure: change
     on_success: change
+env:
+  global:
+  - secure: HULFE++L/3SMKjaliZhA59p6J1w/ynQgfP4C4m+cRHwv6qmVZp8S4fzql1xem5lcFGbseuQddbThu6DvBvsG5lZ69ibguG3gShNj9qXOVPhR52wQjnTzXq9BaLJA+G3jlUIbGHlW5jL4eal6xvGJweD5VTWNV4rLj3gtjyQ3EeAsPmbZjsWCOe/+hrNDnspgae/84jeNHyYLpXaZO/nyUMfdzWGhIYnDvJGCQ0LVLlJb4lSVvKJjlHgaa/FOqUY8SVedtCPq3RAQinu2fEjxccDZ7ZZuBNEsF/tLP0TvQdFZQduu3oLHT4BpSckB627BO5Rfo/8sxR2pKd5Q1/glrOVcCucLAOIkrty4IqOP059/2l2Im1mr1oGJywIziTXCBvkK/rVleOXa/fyQbvLrUNZGLC6PjHeCeupCjBBvesFm7J5leA/F3VLBcRVtqxZ2vVYuQ71floKrkFOluPmgmh0ZRpZt2ksqPVpBT8CK76Fls+j3nfor/yvuXVcm2BXrk+L5+SdkEiqnNOjQDB8qe2Phhqd8MebRAV2Ie7Ves2kTjmcysKsty/bW5ydytJKXaH3qbFG7Af8xE2VONkAKdJQ6zq008j7DSkUdI0owl7Ep3mp3DkP0NVV5LL7eVNi4er+gqDS7XOSEc1vQQR3e0AvgCtOhqHfQ5caEq1uI7q8=
+  - secure: jWfdMgy1Pz8VV5NCx3Y0p98EcjtI80sMk9j7abImek2rBqrVILVQqqTWth3ev8cDXddYeruDffbRtgnsZeqIf1EXx6DFDV1t7oC+NGJl5fE+4viTUOJts1Pb9YSW6NhfRs9VbSluxisUYSI3Uc4VYNVel8ocTR73/FXTZkJFID28w4ZiRdxBJvo22k3lzSwoagJBee4ooFvSSqRV/ZOZesWKfl8xqXkijeu9YO6vuGQS60PvGv4tyt4EVv3ESroMa5vq9jI5A0qncFmsS3+5S85xnDsVqQYf70GDSdmVD4sOG1GGpIQknIT70QHxzuxNX/XCIHiir+25x3HNCZenpOFwxPebc07tvp1VbW/ifuj7TDythpNegNVzw400qbKo4h+4/wH6dO/QIfhP25hhfodPMJtA3GKZKmnFl8eAfnYZ+kjkXQRwt99tpEAtEZmi/tcRPg6PVTtnq2wCpgja8awpCjIDy/R4ksWXWx++cG78TxZ+08Ps83K9qMprHK4Sd251OgbhEOuhAJGAIy3DfeM8PJox+CBL0BoDi2uC5xUYuR3+2paBTT0hxlY1hj7dHoiBo25Xw32haUtJPxhCzerueH7C+NnzgXxHLSveoHhRS+2ZpMsAIZTd35aXA7tOPjYo4OaB62qSq7DL0NvK6J0Y0mRh6zL6wlr708nP31g=
