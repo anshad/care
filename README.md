@@ -2,6 +2,8 @@
 
 A patient/hospital portal generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.5.0.
 
+![build](https://travis-ci.org/anshad/care.svg?branch=master)
+
 ## Commands
 
 * Run development server - `ng serve -o`
