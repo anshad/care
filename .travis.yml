@@ -13,7 +13,7 @@ script:
 - npm install
 - ng build --prod
 - compodoc -p src/tsconfig.app.json
-- ngh --dir "documentation" --repo=https://VU/NCkzNi+Y7DERjQEpX7TIqMYvek9hegk8MsTA3boTSUDtjtViFsT/UdLJtGylp2w9y1JaGQhGMZURVLKKGZEqP6GdDlRynRUMPPfJXexSJNFk+n2AkgU4s2yK45H486O4TiqiJq5nFpcusVaCRNsUMdqImut/ScFlv+CPwtgQV6BHDYGHUkWfG61m+d7hLhDKU6ozD4pxugTH4qA6agRs5GxdTcmMAePCC0VsBalXY13CtO7SvhRlcZseJDoxTDVeOzkZn5lMk8NM+0P8VRH5tmUKt9OcoOMAnzFeFAp0vo8B8x7jjXQkF2Hc7KMYDdkW4NgnSKFcScaUOtG4UTzvHIn4523KxCx4xAGvVVHvMobv604lpzNGnwG1KUoYrnkJju1UBbUdtfgRhqjIymVBLiDCTyc4qiEv6xS9po+FAaM91JnSSQUvbrxtOGiN6PU9Krsl6MpWbhg4aY2F0eCAkC3v+cXFycqOR6KvTh2v3aiEuLE4lEVUzWQW3xOIsPvUvpiUlnO7+B8OnDpZ7ybX1Idk42BXq6Xdm/j4KRS4Awkixl1XrHaCPmTqWa9fLAu08oZuxppbUc4en0/MczmK9/dfspKD7V06gJX9fUj0Q0uRyqRyNK8qAdiCSOS1IygH3+42WvlJ091Cf/zYL2BEUSIgvNiInLSKz7+NChws=@github.com/anshad/care.git --name="Anshad Vattapoyil" --email=anshad.musafir@gmail.com
+- ngh --dir "documentation" --repo=https://83cb40868b0c06b87979a62d507d58a4237701f7@github.com/anshad/care.git --name="Anshad Vattapoyil" --email=anshad.musafir@gmail.com
 after_success:
 - firebase deploy --token $FIREBASE_TOKEN
 notifications:
