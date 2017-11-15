@@ -13,14 +13,10 @@ script:
 - npm install
 - ng build --prod
 - compodoc -p src/tsconfig.app.json
-- ngh --dir "documentation" --repo=$GH_TOKEN@github.com/anshad/care.git --name="Anshad Vattapoyil" --email=anshad.musafir@gmail.com
+- ngh --dir "documentation" --no-silent --repo=$GH_TOKEN@github.com/anshad/care.git --name="Anshad Vattapoyil" --email=anshad.musafir@gmail.com
 after_success:
 - firebase deploy --token $FIREBASE_TOKEN
 notifications:
   email:
     on_failure: change
     on_success: change
-env:
-  global:
-  - secure: HULFE++L/3SMKjaliZhA59p6J1w/ynQgfP4C4m+cRHwv6qmVZp8S4fzql1xem5lcFGbseuQddbThu6DvBvsG5lZ69ibguG3gShNj9qXOVPhR52wQjnTzXq9BaLJA+G3jlUIbGHlW5jL4eal6xvGJweD5VTWNV4rLj3gtjyQ3EeAsPmbZjsWCOe/+hrNDnspgae/84jeNHyYLpXaZO/nyUMfdzWGhIYnDvJGCQ0LVLlJb4lSVvKJjlHgaa/FOqUY8SVedtCPq3RAQinu2fEjxccDZ7ZZuBNEsF/tLP0TvQdFZQduu3oLHT4BpSckB627BO5Rfo/8sxR2pKd5Q1/glrOVcCucLAOIkrty4IqOP059/2l2Im1mr1oGJywIziTXCBvkK/rVleOXa/fyQbvLrUNZGLC6PjHeCeupCjBBvesFm7J5leA/F3VLBcRVtqxZ2vVYuQ71floKrkFOluPmgmh0ZRpZt2ksqPVpBT8CK76Fls+j3nfor/yvuXVcm2BXrk+L5+SdkEiqnNOjQDB8qe2Phhqd8MebRAV2Ie7Ves2kTjmcysKsty/bW5ydytJKXaH3qbFG7Af8xE2VONkAKdJQ6zq008j7DSkUdI0owl7Ep3mp3DkP0NVV5LL7eVNi4er+gqDS7XOSEc1vQQR3e0AvgCtOhqHfQ5caEq1uI7q8=
-  - secure: jWfdMgy1Pz8VV5NCx3Y0p98EcjtI80sMk9j7abImek2rBqrVILVQqqTWth3ev8cDXddYeruDffbRtgnsZeqIf1EXx6DFDV1t7oC+NGJl5fE+4viTUOJts1Pb9YSW6NhfRs9VbSluxisUYSI3Uc4VYNVel8ocTR73/FXTZkJFID28w4ZiRdxBJvo22k3lzSwoagJBee4ooFvSSqRV/ZOZesWKfl8xqXkijeu9YO6vuGQS60PvGv4tyt4EVv3ESroMa5vq9jI5A0qncFmsS3+5S85xnDsVqQYf70GDSdmVD4sOG1GGpIQknIT70QHxzuxNX/XCIHiir+25x3HNCZenpOFwxPebc07tvp1VbW/ifuj7TDythpNegNVzw400qbKo4h+4/wH6dO/QIfhP25hhfodPMJtA3GKZKmnFl8eAfnYZ+kjkXQRwt99tpEAtEZmi/tcRPg6PVTtnq2wCpgja8awpCjIDy/R4ksWXWx++cG78TxZ+08Ps83K9qMprHK4Sd251OgbhEOuhAJGAIy3DfeM8PJox+CBL0BoDi2uC5xUYuR3+2paBTT0hxlY1hj7dHoiBo25Xw32haUtJPxhCzerueH7C+NnzgXxHLSveoHhRS+2ZpMsAIZTd35aXA7tOPjYo4OaB62qSq7DL0NvK6J0Y0mRh6zL6wlr708nP31g=
