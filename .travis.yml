@@ -13,7 +13,7 @@ script:
 - npm install
 - ng build --prod
 - compodoc -p src/tsconfig.app.json
-- ngh --dir "documentation" --repo=https://83cb40868b0c06b87979a62d507d58a4237701f7@github.com/anshad/care.git --name="Anshad Vattapoyil" --email=anshad.musafir@gmail.com
+- ngh --dir "documentation" --repo=$GH_TOKEN@github.com/anshad/care.git --name="Anshad Vattapoyil" --email=anshad.musafir@gmail.com
 after_success:
 - firebase deploy --token $FIREBASE_TOKEN
 notifications:
