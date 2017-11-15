@@ -91,7 +91,13 @@
                                     <a href="../components/AppointmentsComponent.html" >AppointmentsComponent</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../components/BookingConfirmComponent.html" >BookingConfirmComponent</a>
+                                </li>
+                                <li class="link">
                                     <a href="../components/DoctorsComponent.html" >DoctorsComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/HospitalDetailsComponent.html" >HospitalDetailsComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/HospitalsComponent.html" >HospitalsComponent</a>
@@ -104,6 +110,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../components/PatientsComponent.html" >PatientsComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/ScheduleComponent.html" >ScheduleComponent</a>
                                 </li>
                         </ul>
                     </li>
@@ -268,7 +277,13 @@
                                            <a href="../components/AppointmentsComponent.html" >AppointmentsComponent</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../components/BookingConfirmComponent.html" >BookingConfirmComponent</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../components/DoctorsComponent.html" >DoctorsComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/HospitalDetailsComponent.html" >HospitalDetailsComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/HospitalsComponent.html" >HospitalsComponent</a>
@@ -281,6 +296,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../components/PatientsComponent.html" >PatientsComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/ScheduleComponent.html" >ScheduleComponent</a>
                                        </li>
                                </ul>
                            </li>
@@ -446,6 +464,9 @@
                                          <a href="#deleteHospital">deleteHospital</a>
                                     </li>
                                     <li>
+                                         <a href="#filterBy">filterBy</a>
+                                    </li>
+                                    <li>
                                          <a href="#getHospitalRef">getHospitalRef</a>
                                     </li>
                                     <li>
@@ -475,7 +496,7 @@
                             </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/hospitals/hospitals.service.ts:16</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/hospitals/hospitals.service.ts:24</a></div>
                                         </td>
                                     </tr>
             
@@ -535,7 +556,7 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="66" class="link-to-prism">src/app/hospitals/hospitals.service.ts:66</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="90" class="link-to-prism">src/app/hospitals/hospitals.service.ts:90</a></div>
                                         </td>
                                     </tr>
             
@@ -648,7 +669,7 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="119" class="link-to-prism">src/app/hospitals/hospitals.service.ts:119</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="143" class="link-to-prism">src/app/hospitals/hospitals.service.ts:143</a></div>
                                         </td>
                                     </tr>
             
@@ -682,7 +703,7 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="112" class="link-to-prism">src/app/hospitals/hospitals.service.ts:112</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="136" class="link-to-prism">src/app/hospitals/hospitals.service.ts:136</a></div>
                                         </td>
                                     </tr>
             
@@ -733,6 +754,69 @@
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
+                                    <a name="filterBy"></a>
+                                    <span class="name"><b> filterBy</b><a href="#filterBy"><span class="fa fa-link"></span></a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+            <code>filterBy(place: string | null)</code>
+                                </td>
+                            </tr>
+            
+            
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/hospitals/hospitals.service.ts:41</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Filter hospital by a location</p>
+            </div>
+            
+                                        <div class="io-description">
+                                                <b>Parameters :</b>
+                                                <table class="params">
+                                                    <thead>
+                                                        <tr>
+                                                            <td>Name</td>
+                                                            <td>Type</td>
+                                                            <td>Optional</td>
+                                                            <td>Description</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                            <tr>
+                                                              <td>place</td>
+                                                              <td>
+                                                                      <code>string | null</code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td></td>
+                                                            </tr>
+                                                    </tbody>
+                                                </table>
+                                        </div>
+                                        <div>
+                                        </div>
+                                        <div class="io-description">
+                                            <b>Returns : </b>    <code>Observable&lt;any[]&gt;</code>
+            
+                                        </div>
+                                            <div class="io-description">
+                                                
+                                            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
                                     <a name="getHospitalRef"></a>
                                     <span class="name"><b> getHospitalRef</b><a href="#getHospitalRef"><span class="fa fa-link"></span></a></span>
                                 </td>
@@ -746,7 +830,7 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="39" class="link-to-prism">src/app/hospitals/hospitals.service.ts:39</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/app/hospitals/hospitals.service.ts:63</a></div>
                                         </td>
                                     </tr>
             
@@ -780,7 +864,7 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="32" class="link-to-prism">src/app/hospitals/hospitals.service.ts:32</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/hospitals/hospitals.service.ts:56</a></div>
                                         </td>
                                     </tr>
             
@@ -814,7 +898,7 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="46" class="link-to-prism">src/app/hospitals/hospitals.service.ts:46</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/app/hospitals/hospitals.service.ts:70</a></div>
                                         </td>
                                     </tr>
             
@@ -848,7 +932,7 @@
             
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="89" class="link-to-prism">src/app/hospitals/hospitals.service.ts:89</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="113" class="link-to-prism">src/app/hospitals/hospitals.service.ts:113</a></div>
                                         </td>
                                     </tr>
             
@@ -979,7 +1063,7 @@
                                 </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/hospitals/hospitals.service.ts:16</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/hospitals/hospitals.service.ts:24</a></div>
                                         </td>
                                     </tr>
             
@@ -1002,8 +1086,16 @@
 // import { environment } from &#x27;./../../environments/environment.prod&#x27;;
 import { Injectable } from &#x27;@angular/core&#x27;;
 import { Observable, Subscribable } from &#x27;rxjs/Observable&#x27;;
+import { BehaviorSubject } from &#x27;rxjs/BehaviorSubject&#x27;;
+import { Subscription } from &#x27;rxjs/Subscription&#x27;;
+import &#x27;rxjs/add/operator/switchMap&#x27;;
 // import { Http } from &#x27;@angular/http&#x27;;
-import { AngularFireDatabase, AngularFireList } from &#x27;angularfire2/database&#x27;;
+import {
+    AngularFireDatabase,
+    AngularFireList,
+    AngularFireAction
+} from &#x27;angularfire2/database&#x27;;
+import * as firebase from &#x27;firebase&#x27;;
 
 /**
  * Hospital service or db adapter
@@ -1024,6 +1116,22 @@ export class HospitalsService {
          * get hospital db ref
          */
         this.hospitalsRef &#x3D; this.db.list(&#x27;hospitals&#x27;);
+    }
+
+    /**
+     * Filter hospital by a location
+     * @param place
+     */
+    filterBy(place: string | null): Observable&lt;any[]&gt; {
+        return this.db
+            .list(&#x27;/hospitals&#x27;, ref &#x3D;&gt; ref.orderByChild(&#x27;place&#x27;).equalTo(place))
+            .snapshotChanges()
+            .map(changes &#x3D;&gt; {
+                return changes.map(c &#x3D;&gt; ({
+                    key: c.payload.key,
+                    ...c.payload.val()
+                }));
+            });
     }
 
     /**

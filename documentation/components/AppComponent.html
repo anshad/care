@@ -91,7 +91,13 @@
                                     <a href="../components/AppointmentsComponent.html" >AppointmentsComponent</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../components/BookingConfirmComponent.html" >BookingConfirmComponent</a>
+                                </li>
+                                <li class="link">
                                     <a href="../components/DoctorsComponent.html" >DoctorsComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/HospitalDetailsComponent.html" >HospitalDetailsComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/HospitalsComponent.html" >HospitalsComponent</a>
@@ -104,6 +110,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../components/PatientsComponent.html" >PatientsComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/ScheduleComponent.html" >ScheduleComponent</a>
                                 </li>
                         </ul>
                     </li>
@@ -268,7 +277,13 @@
                                            <a href="../components/AppointmentsComponent.html" >AppointmentsComponent</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../components/BookingConfirmComponent.html" >BookingConfirmComponent</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../components/DoctorsComponent.html" >DoctorsComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/HospitalDetailsComponent.html" >HospitalDetailsComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/HospitalsComponent.html" >HospitalsComponent</a>
@@ -281,6 +296,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../components/PatientsComponent.html" >PatientsComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/ScheduleComponent.html" >ScheduleComponent</a>
                                        </li>
                                </ul>
                            </li>
@@ -528,31 +546,36 @@ export class AppComponent {
 
     <div class="tab-pane fade" id="templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;app-header mat-elevation-z6&quot;&gt;
-  &lt;mat-toolbar color&#x3D;&quot;primary&quot;&gt;
-    &lt;div class&#x3D;&quot;header-container&quot;&gt;
-      &lt;!-- logo --&gt;
-      &lt;div class&#x3D;&quot;logo-container&quot;&gt;
-        &lt;span class&#x3D;&quot;logo&quot;&gt;Care&lt;/span&gt;
-      &lt;/div&gt;
-      &lt;!-- nav menu --&gt;
-      &lt;div class&#x3D;&quot;nav-container&quot;&gt;
-        &lt;ul class&#x3D;&quot;nav-menus&quot;&gt;
-          &lt;li&gt;
-            &lt;a [routerLink]&#x3D;&quot;[&#x27;/appointments&#x27;]&quot;&gt;Appointments&lt;/a&gt;
-          &lt;/li&gt;
-          &lt;li&gt;
-            &lt;a [routerLink]&#x3D;&quot;[&#x27;/patients&#x27;]&quot;&gt;Patients&lt;/a&gt;
-          &lt;/li&gt;
-          &lt;li&gt;
-            &lt;a [routerLink]&#x3D;&quot;[&#x27;/hospitals&#x27;]&quot;&gt;Hospitals&lt;/a&gt;
-          &lt;/li&gt;
-          &lt;li&gt;
-            &lt;a [routerLink]&#x3D;&quot;[&#x27;/doctors&#x27;]&quot;&gt;Doctors&lt;/a&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/mat-toolbar&gt;
+    &lt;mat-toolbar color&#x3D;&quot;primary&quot;&gt;
+        &lt;div class&#x3D;&quot;header-container&quot;&gt;
+            &lt;!-- logo --&gt;
+            &lt;div class&#x3D;&quot;logo-container&quot;&gt;
+                &lt;span
+                    class&#x3D;&quot;logo&quot;
+                    [routerLink]&#x3D;&quot;[&#x27;/hospitals&#x27;]&quot;
+                &gt;
+                    Care
+                &lt;/span&gt;
+            &lt;/div&gt;
+            &lt;!-- nav menu --&gt;
+            &lt;div class&#x3D;&quot;nav-container&quot;&gt;
+                &lt;ul class&#x3D;&quot;nav-menus&quot;&gt;
+                    &lt;li&gt;
+                        &lt;a [routerLink]&#x3D;&quot;[&#x27;/appointments&#x27;]&quot;&gt;Appointments&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a [routerLink]&#x3D;&quot;[&#x27;/patients&#x27;]&quot;&gt;Patients&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a [routerLink]&#x3D;&quot;[&#x27;/hospitals&#x27;]&quot;&gt;Hospitals&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a [routerLink]&#x3D;&quot;[&#x27;/doctors&#x27;]&quot;&gt;Doctors&lt;/a&gt;
+                    &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/mat-toolbar&gt;
 &lt;/div&gt;
 &lt;router-outlet&gt;&lt;/router-outlet&gt;
 </code></pre>
@@ -581,8 +604,8 @@ export class AppComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="app-header mat-elevation-z6">  <mat-toolbar color="primary">    <div class="header-container">      <!-- logo -->      <div class="logo-container">        <span class="logo">Care</span>      </div>      <!-- nav menu -->      <div class="nav-container">        <ul class="nav-menus">          <li>            <a [routerLink]="[\'/appointments\']">Appointments</a>          </li>          <li>            <a [routerLink]="[\'/patients\']">Patients</a>          </li>          <li>            <a [routerLink]="[\'/hospitals\']">Hospitals</a>          </li>          <li>            <a [routerLink]="[\'/doctors\']">Doctors</a>          </li>        </ul>      </div>    </div>  </mat-toolbar></div><router-outlet></router-outlet></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppointmentsComponent', 'selector': 'app-appointments'},{'name': 'DoctorsComponent', 'selector': 'app-doctors'},{'name': 'HospitalsComponent', 'selector': 'app-hospitals'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'PatientsComponent', 'selector': 'app-patients'}];
+        var COMPONENT_TEMPLATE = '<div><div class="app-header mat-elevation-z6">    <mat-toolbar color="primary">        <div class="header-container">            <!-- logo -->            <div class="logo-container">                <span                    class="logo"                    [routerLink]="[\'/hospitals\']"                >                    Care                </span>            </div>            <!-- nav menu -->            <div class="nav-container">                <ul class="nav-menus">                    <li>                        <a [routerLink]="[\'/appointments\']">Appointments</a>                    </li>                    <li>                        <a [routerLink]="[\'/patients\']">Patients</a>                    </li>                    <li>                        <a [routerLink]="[\'/hospitals\']">Hospitals</a>                    </li>                    <li>                        <a [routerLink]="[\'/doctors\']">Doctors</a>                    </li>                </ul>            </div>        </div>    </mat-toolbar></div><router-outlet></router-outlet></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppointmentsComponent', 'selector': 'app-appointments'},{'name': 'BookingConfirmComponent', 'selector': 'app-booking-confirm'},{'name': 'DoctorsComponent', 'selector': 'app-doctors'},{'name': 'HospitalDetailsComponent', 'selector': 'app-hospital-details'},{'name': 'HospitalsComponent', 'selector': 'app-hospitals'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'PatientsComponent', 'selector': 'app-patients'},{'name': 'ScheduleComponent', 'selector': 'app-schedule'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppComponent'};
 </script>

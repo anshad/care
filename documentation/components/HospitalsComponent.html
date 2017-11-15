@@ -91,7 +91,13 @@
                                     <a href="../components/AppointmentsComponent.html" >AppointmentsComponent</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../components/BookingConfirmComponent.html" >BookingConfirmComponent</a>
+                                </li>
+                                <li class="link">
                                     <a href="../components/DoctorsComponent.html" >DoctorsComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/HospitalDetailsComponent.html" >HospitalDetailsComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/HospitalsComponent.html"  data-type="entity-link" class="active" >HospitalsComponent</a>
@@ -104,6 +110,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../components/PatientsComponent.html" >PatientsComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/ScheduleComponent.html" >ScheduleComponent</a>
                                 </li>
                         </ul>
                     </li>
@@ -268,7 +277,13 @@
                                            <a href="../components/AppointmentsComponent.html" >AppointmentsComponent</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../components/BookingConfirmComponent.html" >BookingConfirmComponent</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../components/DoctorsComponent.html" >DoctorsComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/HospitalDetailsComponent.html" >HospitalDetailsComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/HospitalsComponent.html"  data-type="entity-link" class="active" >HospitalsComponent</a>
@@ -281,6 +296,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../components/PatientsComponent.html" >PatientsComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/ScheduleComponent.html" >ScheduleComponent</a>
                                        </li>
                                </ul>
                            </li>
@@ -661,7 +679,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="72" class="link-to-prism">src/app/hospitals/hospitals.component.ts:72</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="75" class="link-to-prism">src/app/hospitals/hospitals.component.ts:75</a></div>
                                 </td>
                             </tr>
     
@@ -695,7 +713,7 @@
     
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="65" class="link-to-prism">src/app/hospitals/hospitals.component.ts:65</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="68" class="link-to-prism">src/app/hospitals/hospitals.component.ts:68</a></div>
                                 </td>
                             </tr>
     
@@ -912,7 +930,7 @@ export class HospitalsComponent implements OnInit {
     /**
      * Place list for filter
      */
-    places &#x3D; [&#x27;Kazhakoottam&#x27;, &#x27;Kulathur&#x27;, &#x27;Chaacka&#x27;];
+    places &#x3D; [&#x27;Kazhakoottam&#x27;, &#x27;Kulathur&#x27;, &#x27;Pattom&#x27;];
 
     /**
     * Hospitals list
@@ -940,6 +958,9 @@ export class HospitalsComponent implements OnInit {
      */
     filterByLocation(place) {
         console.log(place);
+        this.hospitalsService.filterBy(place).subscribe(result &#x3D;&gt; {
+            console.log(result);
+        });
     }
 
     // public filterByLocation(): void {
@@ -970,65 +991,103 @@ export class HospitalsComponent implements OnInit {
     <div class="tab-pane fade" id="templateData">
         <pre class="line-numbers"><code class="language-html">&lt;!-- filter header --&gt;
 &lt;div class&#x3D;&quot;filter-bar&quot;&gt;
-  &lt;!-- filters --&gt;
-  &lt;form&gt;
-    &lt;!-- department filter --&gt;
-    &lt;mat-form-field&gt;
-      &lt;input type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;Filter by department&quot; aria-label&#x3D;&quot;Place&quot; matInput [formControl]&#x3D;&quot;myControl&quot; [matAutocomplete]&#x3D;&quot;auto&quot;&gt;
-      &lt;mat-autocomplete #auto&#x3D;&quot;matAutocomplete&quot;&gt;
-        &lt;!-- (optionSelected)&#x3D;&quot;filterByLocation()&quot; --&gt;
-        &lt;mat-option *ngFor&#x3D;&quot;let place of places&quot; [value]&#x3D;&quot;place&quot; (onSelectionChange)&#x3D;&quot;filterByLocation(place)&quot;&gt;
-          {{ place }}
-        &lt;/mat-option&gt;
-      &lt;/mat-autocomplete&gt;
-    &lt;/mat-form-field&gt;
-    &lt;!-- location filter --&gt;
-    &lt;mat-form-field&gt;
-      &lt;input type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;Filter by location&quot; aria-label&#x3D;&quot;Place&quot; matInput [formControl]&#x3D;&quot;myControl&quot; [matAutocomplete]&#x3D;&quot;auto&quot;&gt;
-      &lt;mat-autocomplete #auto&#x3D;&quot;matAutocomplete&quot;&gt;
-        &lt;!-- (optionSelected)&#x3D;&quot;someFn()&quot; --&gt;
-        &lt;mat-option *ngFor&#x3D;&quot;let place of places&quot; [value]&#x3D;&quot;place&quot; (onSelectionChange)&#x3D;&quot;filterByLocation(place)&quot;&gt;
-          {{ place }}
-        &lt;/mat-option&gt;
-      &lt;/mat-autocomplete&gt;
-    &lt;/mat-form-field&gt;
-  &lt;/form&gt;
+    &lt;!-- filters --&gt;
+    &lt;form&gt;
+        &lt;!-- department filter --&gt;
+        &lt;mat-form-field&gt;
+            &lt;input
+                type&#x3D;&quot;text&quot;
+                placeholder&#x3D;&quot;Filter by department&quot;
+                aria-label&#x3D;&quot;Place&quot;
+                matInput
+                [formControl]&#x3D;&quot;myControl&quot;
+                [matAutocomplete]&#x3D;&quot;auto&quot;
+            &gt;
+            &lt;mat-autocomplete #auto&#x3D;&quot;matAutocomplete&quot;&gt;
+                &lt;!-- (optionSelected)&#x3D;&quot;filterByLocation()&quot; --&gt;
+                &lt;mat-option
+                    *ngFor&#x3D;&quot;let place of places&quot;
+                    [value]&#x3D;&quot;place&quot;
+                    (onSelectionChange)&#x3D;&quot;filterByLocation(place)&quot;
+                &gt;
+                    {{ place }}
+                &lt;/mat-option&gt;
+            &lt;/mat-autocomplete&gt;
+        &lt;/mat-form-field&gt;
+        &lt;!-- location filter --&gt;
+        &lt;mat-form-field&gt;
+            &lt;input
+                type&#x3D;&quot;text&quot;
+                placeholder&#x3D;&quot;Filter by location&quot;
+                aria-label&#x3D;&quot;Place&quot;
+                matInput
+                [formControl]&#x3D;&quot;myControl&quot;
+                [matAutocomplete]&#x3D;&quot;auto&quot;
+            &gt;
+            &lt;mat-autocomplete #auto&#x3D;&quot;matAutocomplete&quot;&gt;
+                &lt;!-- (optionSelected)&#x3D;&quot;someFn()&quot; --&gt;
+                &lt;mat-option
+                    *ngFor&#x3D;&quot;let place of places&quot;
+                    [value]&#x3D;&quot;place&quot;
+                    (onSelectionChange)&#x3D;&quot;filterByLocation(place)&quot;
+                &gt;
+                    {{ place }}
+                &lt;/mat-option&gt;
+            &lt;/mat-autocomplete&gt;
+        &lt;/mat-form-field&gt;
+    &lt;/form&gt;
 &lt;/div&gt;
 &lt;!-- contents --&gt;
 &lt;div class&#x3D;&quot;container&quot;&gt;
-  &lt;div class&#x3D;&quot;row&quot;&gt;
-    &lt;!-- hospital cards --&gt;
-    &lt;div *ngFor&#x3D;&quot;let hospital of hospitals&quot; class&#x3D;&quot;col-md-3&quot;&gt;
-      &lt;mat-card&gt;
-        &lt;mat-card-header&gt;
-          &lt;mat-card-title&gt;{{ hospital.name }}&lt;/mat-card-title&gt;
-          &lt;mat-card-subtitle&gt;{{ hospital.place }}&lt;/mat-card-subtitle&gt;
-        &lt;/mat-card-header&gt;
-        &lt;img mat-card-image src&#x3D;&quot;http://via.placeholder.com/350x150&quot; alt&#x3D;&quot;{{ hospital.name }}&quot;&gt;
-        &lt;mat-card-content&gt;
-          &lt;address&gt;
-            &lt;p&gt;{{ hospital.landmark }}&lt;/p&gt;
-            &lt;p&gt;{{ hospital.place }}&lt;/p&gt;
-            &lt;p&gt;{{ hospital.district }}&lt;/p&gt;
-            &lt;p&gt;
-              {{ hospital.state }}
-              &lt;span *ngIf&#x3D;&quot;hospital.postalCode&quot;&gt;-&lt;/span&gt;
-              {{ hospital.postalCode }}
-            &lt;/p&gt;
-          &lt;/address&gt;
-        &lt;/mat-card-content&gt;
-        &lt;mat-card-actions&gt;
-          &lt;a mat-button color&#x3D;&quot;primary&quot; routerLink&#x3D;&quot;.&quot; (click)&#x3D;&quot;loadHospitalDetails(hospital)&quot;&gt;
-            Details
-          &lt;/a&gt;
-          &lt;a mat-button color&#x3D;&quot;primary&quot; class&#x3D;&quot;pull-right&quot; routerLink&#x3D;&quot;.&quot;&gt;
-            Doctors
-          &lt;/a&gt;
-        &lt;/mat-card-actions&gt;
-      &lt;/mat-card&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+        &lt;!-- hospital cards --&gt;
+        &lt;div
+            *ngFor&#x3D;&quot;let hospital of hospitals&quot;
+            class&#x3D;&quot;col-md-3&quot;
+        &gt;
+            &lt;mat-card&gt;
+                &lt;mat-card-header&gt;
+                    &lt;mat-card-title&gt;{{ hospital.name }}&lt;/mat-card-title&gt;
+                    &lt;mat-card-subtitle&gt;{{ hospital.place }}&lt;/mat-card-subtitle&gt;
+                &lt;/mat-card-header&gt;
+                &lt;img
+                    mat-card-image
+                    src&#x3D;&quot;http://via.placeholder.com/350x150&quot;
+                    alt&#x3D;&quot;{{ hospital.name }}&quot;
+                &gt;
+                &lt;mat-card-content&gt;
+                    &lt;address&gt;
+                        &lt;p&gt;{{ hospital.landmark }}&lt;/p&gt;
+                        &lt;p&gt;{{ hospital.place }}&lt;/p&gt;
+                        &lt;p&gt;{{ hospital.district }}&lt;/p&gt;
+                        &lt;p&gt;
+                            {{ hospital.state }}
+                            &lt;span *ngIf&#x3D;&quot;hospital.postalCode&quot;&gt;-&lt;/span&gt;
+                            {{ hospital.postalCode }}
+                        &lt;/p&gt;
+                    &lt;/address&gt;
+                &lt;/mat-card-content&gt;
+                &lt;mat-card-actions&gt;
+                    &lt;a
+                        mat-button
+                        color&#x3D;&quot;primary&quot;
+                        routerLink&#x3D;&quot;.&quot;
+                        (click)&#x3D;&quot;loadHospitalDetails(hospital)&quot;
+                    &gt;
+                        Details
+                    &lt;/a&gt;
+                    &lt;a
+                        mat-button
+                        color&#x3D;&quot;primary&quot;
+                        class&#x3D;&quot;pull-right&quot;
+                        routerLink&#x3D;&quot;.&quot;
+                    &gt;
+                        Doctors
+                    &lt;/a&gt;
+                &lt;/mat-card-actions&gt;
+            &lt;/mat-card&gt;
+        &lt;/div&gt;
     &lt;/div&gt;
-    &lt;!-- end hospitals --&gt;
-  &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
     </div>
@@ -1056,8 +1115,8 @@ export class HospitalsComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><!-- filter header --><div class="filter-bar">  <!-- filters -->  <form>    <!-- department filter -->    <mat-form-field>      <input type="text" placeholder="Filter by department" aria-label="Place" matInput [formControl]="myControl" [matAutocomplete]="auto">      <mat-autocomplete #auto="matAutocomplete">        <!-- (optionSelected)="filterByLocation()" -->        <mat-option *ngFor="let place of places" [value]="place" (onSelectionChange)="filterByLocation(place)">          {{ place }}        </mat-option>      </mat-autocomplete>    </mat-form-field>    <!-- location filter -->    <mat-form-field>      <input type="text" placeholder="Filter by location" aria-label="Place" matInput [formControl]="myControl" [matAutocomplete]="auto">      <mat-autocomplete #auto="matAutocomplete">        <!-- (optionSelected)="someFn()" -->        <mat-option *ngFor="let place of places" [value]="place" (onSelectionChange)="filterByLocation(place)">          {{ place }}        </mat-option>      </mat-autocomplete>    </mat-form-field>  </form></div><!-- contents --><div class="container">  <div class="row">    <!-- hospital cards -->    <div *ngFor="let hospital of hospitals" class="col-md-3">      <mat-card>        <mat-card-header>          <mat-card-title>{{ hospital.name }}</mat-card-title>          <mat-card-subtitle>{{ hospital.place }}</mat-card-subtitle>        </mat-card-header>        <img mat-card-image src="http://via.placeholder.com/350x150" alt="{{ hospital.name }}">        <mat-card-content>          <address>            <p>{{ hospital.landmark }}</p>            <p>{{ hospital.place }}</p>            <p>{{ hospital.district }}</p>            <p>              {{ hospital.state }}              <span *ngIf="hospital.postalCode">-</span>              {{ hospital.postalCode }}            </p>          </address>        </mat-card-content>        <mat-card-actions>          <a mat-button color="primary" routerLink="." (click)="loadHospitalDetails(hospital)">            Details          </a>          <a mat-button color="primary" class="pull-right" routerLink=".">            Doctors          </a>        </mat-card-actions>      </mat-card>    </div>    <!-- end hospitals -->  </div></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppointmentsComponent', 'selector': 'app-appointments'},{'name': 'DoctorsComponent', 'selector': 'app-doctors'},{'name': 'HospitalsComponent', 'selector': 'app-hospitals'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'PatientsComponent', 'selector': 'app-patients'}];
+        var COMPONENT_TEMPLATE = '<div><!-- filter header --><div class="filter-bar">    <!-- filters -->    <form>        <!-- department filter -->        <mat-form-field>            <input                type="text"                placeholder="Filter by department"                aria-label="Place"                matInput                [formControl]="myControl"                [matAutocomplete]="auto"            >            <mat-autocomplete #auto="matAutocomplete">                <!-- (optionSelected)="filterByLocation()" -->                <mat-option                    *ngFor="let place of places"                    [value]="place"                    (onSelectionChange)="filterByLocation(place)"                >                    {{ place }}                </mat-option>            </mat-autocomplete>        </mat-form-field>        <!-- location filter -->        <mat-form-field>            <input                type="text"                placeholder="Filter by location"                aria-label="Place"                matInput                [formControl]="myControl"                [matAutocomplete]="auto"            >            <mat-autocomplete #auto="matAutocomplete">                <!-- (optionSelected)="someFn()" -->                <mat-option                    *ngFor="let place of places"                    [value]="place"                    (onSelectionChange)="filterByLocation(place)"                >                    {{ place }}                </mat-option>            </mat-autocomplete>        </mat-form-field>    </form></div><!-- contents --><div class="container">    <div class="row">        <!-- hospital cards -->        <div            *ngFor="let hospital of hospitals"            class="col-md-3"        >            <mat-card>                <mat-card-header>                    <mat-card-title>{{ hospital.name }}</mat-card-title>                    <mat-card-subtitle>{{ hospital.place }}</mat-card-subtitle>                </mat-card-header>                <img                    mat-card-image                    src="http://via.placeholder.com/350x150"                    alt="{{ hospital.name }}"                >                <mat-card-content>                    <address>                        <p>{{ hospital.landmark }}</p>                        <p>{{ hospital.place }}</p>                        <p>{{ hospital.district }}</p>                        <p>                            {{ hospital.state }}                            <span *ngIf="hospital.postalCode">-</span>                            {{ hospital.postalCode }}                        </p>                    </address>                </mat-card-content>                <mat-card-actions>                    <a                        mat-button                        color="primary"                        routerLink="."                        (click)="loadHospitalDetails(hospital)"                    >                        Details                    </a>                    <a                        mat-button                        color="primary"                        class="pull-right"                        routerLink="."                    >                        Doctors                    </a>                </mat-card-actions>            </mat-card>        </div>    </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppointmentsComponent', 'selector': 'app-appointments'},{'name': 'BookingConfirmComponent', 'selector': 'app-booking-confirm'},{'name': 'DoctorsComponent', 'selector': 'app-doctors'},{'name': 'HospitalDetailsComponent', 'selector': 'app-hospital-details'},{'name': 'HospitalsComponent', 'selector': 'app-hospitals'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'PatientsComponent', 'selector': 'app-patients'},{'name': 'ScheduleComponent', 'selector': 'app-schedule'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'HospitalsComponent'};
 </script>

@@ -112,7 +112,7 @@
                                     <a href="../components/PatientsComponent.html" >PatientsComponent</a>
                                 </li>
                                 <li class="link">
-                                    <a href="../components/ScheduleComponent.html" >ScheduleComponent</a>
+                                    <a href="../components/ScheduleComponent.html"  data-type="entity-link" class="active" >ScheduleComponent</a>
                                 </li>
                         </ul>
                     </li>
@@ -176,7 +176,7 @@
                                 id="xs-miscellaneous-links"
                             >
                                 <li class="link">
-                                  <a href="../miscellaneous/variables.html" data-type="entity-link"  class="active" >Variables</a>
+                                  <a href="../miscellaneous/variables.html" data-type="entity-link" >Variables</a>
                                 </li>
                         </ul>
                     </li>
@@ -298,7 +298,7 @@
                                            <a href="../components/PatientsComponent.html" >PatientsComponent</a>
                                        </li>
                                        <li class="link">
-                                           <a href="../components/ScheduleComponent.html" >ScheduleComponent</a>
+                                           <a href="../components/ScheduleComponent.html"  data-type="entity-link" class="active" >ScheduleComponent</a>
                                        </li>
                                </ul>
                            </li>
@@ -362,7 +362,7 @@
                                        id="miscellaneous-links"
                    >
                                        <li class="link">
-                                         <a href="../miscellaneous/variables.html" data-type="entity-link"  class="active" >Variables</a>
+                                         <a href="../miscellaneous/variables.html" data-type="entity-link" >Variables</a>
                                        </li>
                                </ul>
                            </li>
@@ -386,98 +386,334 @@
                    
                    </nav>
                </div>
-               <div class="content miscellaneous-variables">
+               <div class="content component">
                    <div class="content-data">
 
 
 
 
-
-
-
-
-
-
-
-
 <ol class="breadcrumb">
-  <li>Miscellaneous - Variables</li>
+  <li>Components</li>
+  <li>ScheduleComponent</li>
 </ol>
 
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active">
+        <a href="#info" id="info-tab" role="tab" data-toggle="tab" data-link="info">Info</a>
+    </li>
+
+    <li>
+        <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+    </li>
+
+    <li>
+        <a href="#templateData" role="tab" id="templateData-tab" data-toggle="tab" data-link="template">Template</a>
+    </li>
+    <li>
+        <a href="#tree" role="tab" id="tree-tab" data-toggle="tab" data-link="dom-tree">DOM Tree</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="info"><p class="comment">
+    <h3>File</h3>
+</p>
+<p class="comment">
+    <code>src/app/schedule/schedule.component.ts</code>
+</p>
+
+
+
+    <p class="comment">
+        <h3>Implements</h3>
+    </p>
+    <p class="comment">
+                <code><a href="https://angular.io/docs/ts/latest/api/api/core/OnInit" target="_blank" >OnInit</a></code>
+    </p>
+
+
 <section>
-    <h3 id="index">Index</h3>
-    <table class="table table-sm table-bordered index-table">
+    <h3>Metadata</h3>
+    <table class="table table-sm table-hover">
         <tbody>
+
+
             <tr>
-                <td class="col-md-4">
-                    <ul class="index-list">
-                        <li>
-                            <a href="#environment">environment</a>
-                        </li>
-                        <li>
-                            <a href="#environment">environment</a>
-                        </li>
-                    </ul>
-                </td>
+                <td class="col-md-3">encapsulation</td>
+                <td class="col-md-9"><code>ViewEncapsulation.None</code></td>
             </tr>
+
+
+
+
+
+
+
+
+
+
+            <tr>
+                <td class="col-md-3">selector</td>
+                <td class="col-md-9"><code>app-schedule</code></td>
+            </tr>
+
+            <tr>
+                <td class="col-md-3">styleUrls</td>
+                <td class="col-md-9"><code>schedule.component.scss</code></td>
+            </tr>
+
+
+
+            <tr>
+                <td class="col-md-3">templateUrl</td>
+                <td class="col-md-9"><code>./schedule.component.html</code></td>
+            </tr>
+
+
         </tbody>
     </table>
 </section>
 
-    <h3>src/environments/environment.prod.ts</h3>
     <section>
-        <h3></h3>        <table class="table table-sm table-bordered">
+        <h3 id="index">Index</h3>
+        <table class="table table-sm table-bordered index-table">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <span class="modifier">Public</span> <a href="#date">date</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                 <a href="#ngOnInit">ngOnInit</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <section>
+        <h3 id="constructor">Constructor</h3>
+            <table class="table table-sm table-bordered">
                 <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <a name="environment"></a>
-                            <span class="name"><b> environment</b><a href="#environment"><span class="fa fa-link"></span></a></span>
+                            <code>constructor()</code>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/schedule/schedule.component.ts:11</a></div>
+                                </td>
+                            </tr>
+    
+                </tbody>
+            </table>
+    </section>
+
+
+
+
+
+    <section>
+        
+            <h3 id="methods">
+                Methods
+            </h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="ngOnInit"></a>
+                            <span class="name"><b> ngOnInit</b><a href="#ngOnInit"><span class="fa fa-link"></span></a></span>
                         </td>
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <code>environment:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+    <code>ngOnInit()</code>
+                        </td>
+                    </tr>
+    
+    
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/schedule/schedule.component.ts:14</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+    
+                                <div class="io-description">
+                                    <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+    
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </section>
+
+    <section>
+        
+            <h3 id="inputs">
+                Properties
+            </h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <a name="date"></a>
+                            <span class="name"><b><span class="modifier">Public</span> date</b><a href="#date"><span class="fa fa-link"></span></a></span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <span class="modifier-icon fa fa-reset"></span><code>date:     <code><a href="https://angular.io/docs/ts/latest/api/api/forms/FormControl" target="_blank" >FormControl</a></code>
     </code>
                         </td>
                     </tr>
                         <tr>
                             <td class="col-md-4">
-                                <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
+                                <i>Type : </i>    <code><a href="https://angular.io/docs/ts/latest/api/api/forms/FormControl" target="_blank" >FormControl</a></code>
     
                             </td>
                         </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/schedule/schedule.component.ts:11</a></div>
+                                </td>
+                            </tr>
     
     
                 </tbody>
             </table>
     </section>
-    <h3>src/environments/environment.ts</h3>
-    <section>
-        <h3></h3>        <table class="table table-sm table-bordered">
-                <tbody>
-                    <tr>
-                        <td class="col-md-4">
-                            <a name="environment"></a>
-                            <span class="name"><b> environment</b><a href="#environment"><span class="fa fa-link"></span></a></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="col-md-4">
-                            <code>environment:     <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
-    </code>
-                        </td>
-                    </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <i>Type : </i>    <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/object" target="_blank" >object</a></code>
-    
-                            </td>
-                        </tr>
-    
-    
-                </tbody>
-            </table>
-    </section>
+
+</div>
+
+
+    <div class="tab-pane fade tab-source-code" id="source">
+        <pre class="line-numbers"><code class="language-typescript">import { Component, OnInit, ViewEncapsulation } from &#x27;@angular/core&#x27;;
+import { IMyDrpOptions } from &#x27;mydaterangepicker&#x27;;
+import { FormControl } from &#x27;@angular/forms&#x27;;
+@Component({
+    selector: &#x27;app-schedule&#x27;,
+    templateUrl: &#x27;./schedule.component.html&#x27;,
+    styleUrls: [&#x27;./schedule.component.scss&#x27;],
+    encapsulation: ViewEncapsulation.None
+})
+export class ScheduleComponent implements OnInit {
+    public date: FormControl &#x3D; new FormControl(&#x27;&#x27;);
+    constructor() {}
+
+    ngOnInit() {}
+}
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade" id="templateData">
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container&quot;&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+        &lt;div class&#x3D;&quot;col-md-4&quot;&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+            &lt;mat-form-field&gt;
+                &lt;input
+                    matInput
+                    placeholder&#x3D;&quot;Name of Patient&quot;
+                &gt;
+            &lt;/mat-form-field&gt;
+
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;col-md-4&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+        &lt;div class&#x3D;&quot;col-md-4&quot;&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+            &lt;mat-form-field&gt;
+                &lt;input
+                    matInput
+                    [matDatepicker]&#x3D;&quot;dp&quot;
+                    placeholder&#x3D;&quot;Date of appointment&quot;
+                    [formControl]&#x3D;&quot;date&quot;
+                &gt;
+                &lt;mat-datepicker-toggle
+                    matSuffix
+                    [for]&#x3D;&quot;dp&quot;
+                &gt;&lt;/mat-datepicker-toggle&gt;
+                &lt;mat-datepicker #dp&gt;&lt;/mat-datepicker&gt;
+            &lt;/mat-form-field&gt;
+        &lt;/div&gt;
+        &lt;div class&#x3D;&quot;col-md-4&quot;&gt;&lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;&lt;/div&gt;
+    &lt;div class&#x3D;&quot;row&quot;&gt;
+        &lt;div class&#x3D;&quot;col-md-4&quot;&gt;&lt;/div&gt;
+        &lt;div class&#x3D;&quot;col-md-4&quot;&gt;
+            &lt;button [routerLink]&#x3D;&quot;[&#x27;/booking-confirmation&#x27;]&quot;&gt;Make an appointment&lt;/button&gt;
+            &lt;div class&#x3D;&quot;col-md-4&quot;&gt;&lt;/div&gt;
+
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+</code></pre>
+    </div>
+
+    <div class="tab-pane fade" id="tree">
+        <div id="tree-container"></div>
+        <div class="tree-legend">
+            <div class="title">
+                <b>Legend</b>
+            </div>
+            <div>
+                <div class="color htmlelement"></div><span>Html element</span>
+            </div>
+            <div>
+                <div class="color component"></div><span>Component</span>
+            </div>
+            <div>
+                <div class="color directive"></div><span>Html element with directive</span>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="../js/libs/vis.min.js"></script>
+<script src="../js/libs/htmlparser.js"></script>
+<script src="../js/libs/deep-iterator.js"></script>
+<script>
+        var COMPONENT_TEMPLATE = '<div><div class="container">    <div class="row">        <div class="col-md-4"></div>        <div class="col-md-4">            <mat-form-field>                <input                    matInput                    placeholder="Name of Patient"                >            </mat-form-field>        </div>        <div class="col-md-4"></div>    </div>    <div class="row">        <div class="col-md-4"></div>        <div class="col-md-4">            <mat-form-field>                <input                    matInput                    [matDatepicker]="dp"                    placeholder="Date of appointment"                    [formControl]="date"                >                <mat-datepicker-toggle                    matSuffix                    [for]="dp"                ></mat-datepicker-toggle>                <mat-datepicker #dp></mat-datepicker>            </mat-form-field>        </div>        <div class="col-md-4"></div>    </div>    <div class="row"></div>    <div class="row">        <div class="col-md-4"></div>        <div class="col-md-4">            <button [routerLink]="[\'/booking-confirmation\']">Make an appointment</button>            <div class="col-md-4"></div>        </div>    </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppointmentsComponent', 'selector': 'app-appointments'},{'name': 'BookingConfirmComponent', 'selector': 'app-booking-confirm'},{'name': 'DoctorsComponent', 'selector': 'app-doctors'},{'name': 'HospitalDetailsComponent', 'selector': 'app-hospital-details'},{'name': 'HospitalsComponent', 'selector': 'app-hospitals'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'PatientsComponent', 'selector': 'app-patients'},{'name': 'ScheduleComponent', 'selector': 'app-schedule'}];
+    var DIRECTIVES = [];
+    var ACTUAL_COMPONENT = {'name': 'ScheduleComponent'};
+</script>
+<script src="../js/tree.js"></script>
+
+
+
+
+
+
+
+
 
 
                    </div><div class="search-results">

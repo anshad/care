@@ -91,7 +91,13 @@
                                     <a href="../components/AppointmentsComponent.html" >AppointmentsComponent</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../components/BookingConfirmComponent.html" >BookingConfirmComponent</a>
+                                </li>
+                                <li class="link">
                                     <a href="../components/DoctorsComponent.html" >DoctorsComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/HospitalDetailsComponent.html" >HospitalDetailsComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/HospitalsComponent.html" >HospitalsComponent</a>
@@ -104,6 +110,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../components/PatientsComponent.html" >PatientsComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/ScheduleComponent.html" >ScheduleComponent</a>
                                 </li>
                         </ul>
                     </li>
@@ -268,7 +277,13 @@
                                            <a href="../components/AppointmentsComponent.html" >AppointmentsComponent</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../components/BookingConfirmComponent.html" >BookingConfirmComponent</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../components/DoctorsComponent.html" >DoctorsComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/HospitalDetailsComponent.html" >HospitalDetailsComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/HospitalsComponent.html" >HospitalsComponent</a>
@@ -281,6 +296,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../components/PatientsComponent.html" >PatientsComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/ScheduleComponent.html" >ScheduleComponent</a>
                                        </li>
                                </ul>
                            </li>
@@ -409,7 +427,9 @@
 
 
     <div class="tab-pane fade tab-source-code" id="source">
-        <pre class="line-numbers"><code class="language-typescript">import { HospitalsComponent } from &#x27;./hospitals/hospitals.component&#x27;;
+        <pre class="line-numbers"><code class="language-typescript">import { HospitalDetailsComponent } from &#x27;./hospital-details/hospital-details.component&#x27;;
+import { ScheduleComponent } from &#x27;./schedule/schedule.component&#x27;;
+import { HospitalsComponent } from &#x27;./hospitals/hospitals.component&#x27;;
 import { DoctorsComponent } from &#x27;./doctors/doctors.component&#x27;;
 import { PageNotFoundComponent } from &#x27;./page-not-found/page-not-found.component&#x27;;
 import { PatientsComponent } from &#x27;./patients/patients.component&#x27;;
@@ -417,20 +437,24 @@ import { AppointmentsComponent } from &#x27;./appointments/appointments.componen
 import { LoginComponent } from &#x27;./login/login.component&#x27;;
 import { NgModule } from &#x27;@angular/core&#x27;;
 import { Routes, RouterModule } from &#x27;@angular/router&#x27;;
+import { BookingConfirmComponent } from &#x27;./booking-confirm/booking-confirm.component&#x27;;
 
 const routes: Routes &#x3D; [
-  { path: &#x27;login&#x27;, component: LoginComponent },
-  { path: &#x27;appointments&#x27;, component: AppointmentsComponent },
-  { path: &#x27;patients&#x27;, component: PatientsComponent },
-  { path: &#x27;doctors&#x27;, component: DoctorsComponent },
-  { path: &#x27;hospitals&#x27;, component: HospitalsComponent },
-  { path: &#x27;&#x27;, redirectTo: &#x27;/appointments&#x27;, pathMatch: &#x27;full&#x27; },
-  { path: &#x27;**&#x27;, component: PageNotFoundComponent }
+    { path: &#x27;login&#x27;, component: LoginComponent },
+    { path: &#x27;appointments&#x27;, component: AppointmentsComponent },
+    { path: &#x27;patients&#x27;, component: PatientsComponent },
+    { path: &#x27;doctors&#x27;, component: DoctorsComponent },
+    { path: &#x27;hospitals&#x27;, component: HospitalsComponent },
+    { path: &#x27;schedule&#x27;, component: ScheduleComponent },
+    { path: &#x27;hospital-details&#x27;, component: HospitalDetailsComponent },
+    { path: &#x27;booking-confirmation&#x27;, component: BookingConfirmComponent },
+    { path: &#x27;&#x27;, redirectTo: &#x27;/hospitals&#x27;, pathMatch: &#x27;full&#x27; },
+    { path: &#x27;**&#x27;, component: PageNotFoundComponent }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+    imports: [RouterModule.forRoot(routes)],
+    exports: [RouterModule]
 })
 export class AppRoutingModule {}
 </code></pre>

@@ -91,7 +91,13 @@
                                     <a href="../components/AppointmentsComponent.html" >AppointmentsComponent</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../components/BookingConfirmComponent.html" >BookingConfirmComponent</a>
+                                </li>
+                                <li class="link">
                                     <a href="../components/DoctorsComponent.html"  data-type="entity-link" class="active" >DoctorsComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/HospitalDetailsComponent.html" >HospitalDetailsComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/HospitalsComponent.html" >HospitalsComponent</a>
@@ -104,6 +110,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../components/PatientsComponent.html" >PatientsComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/ScheduleComponent.html" >ScheduleComponent</a>
                                 </li>
                         </ul>
                     </li>
@@ -268,7 +277,13 @@
                                            <a href="../components/AppointmentsComponent.html" >AppointmentsComponent</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../components/BookingConfirmComponent.html" >BookingConfirmComponent</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../components/DoctorsComponent.html"  data-type="entity-link" class="active" >DoctorsComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/HospitalDetailsComponent.html" >HospitalDetailsComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/HospitalsComponent.html" >HospitalsComponent</a>
@@ -281,6 +296,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../components/PatientsComponent.html" >PatientsComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/ScheduleComponent.html" >ScheduleComponent</a>
                                        </li>
                                </ul>
                            </li>
@@ -572,12 +590,47 @@ export class DoctorsComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade" id="templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container&quot;&gt;
-  &lt;div class&#x3D;&quot;row&quot;&gt;
-    &lt;div class&#x3D;&quot;col-md-12&quot;&gt;
-      &lt;p&gt;Doctors&lt;/p&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;mat-toolbar&gt;
+    Choose your doctor
+    &lt;mat-form-field class&#x3D;&quot;select-hospitals&quot;&gt;
+        &lt;mat-select placeholder&#x3D;&quot;Select hospitals&quot;&gt;
+            &lt;mat-option&gt;Select hospitals&lt;/mat-option&gt;
+        &lt;/mat-select&gt;
+    &lt;/mat-form-field&gt;
+&lt;/mat-toolbar&gt;
+&lt;div class&#x3D;&quot;container-fluid appointments-page&quot;&gt;
+    &lt;div class&#x3D;&quot;row appointment-content&quot;&gt;
+        &lt;div class&#x3D;&quot;col-lg-1 col-md-4 col-sm-6 col-xs-6 col-item&quot;&gt;
+
+            &lt;div class&#x3D;&quot;list-item&quot;&gt;
+                &lt;mat-card&gt;
+                    &lt;div
+                        class&#x3D;&quot;time-info&quot;
+                        color&#x3D;&quot;primary&quot;
+                    &gt;
+                        Dr. Noushad
+                    &lt;/div&gt;
+                    &lt;mat-card-content&gt;
+                        &lt;img
+                            mat-card-avatar
+                            class&#x3D;&quot;header-image&quot;
+                            src&#x3D;&quot;assets/images/patient.jpg&quot;
+                        &gt;
+                        &lt;div class&#x3D;&quot;content-info&quot;&gt;MBBS,MD&lt;/div&gt;
+                        &lt;div class&#x3D;&quot;content-info&quot;&gt;17 years experience&lt;/div&gt;
+                    &lt;/mat-card-content&gt;
+                    &lt;mat-card-actions&gt;
+                        &lt;button
+                            mat-button
+                            [routerLink]&#x3D;&quot;[&#x27;/schedule&#x27;]&quot;
+                        &gt;
+                            Select
+                        &lt;/button&gt;
+                    &lt;/mat-card-actions&gt;
+                &lt;/mat-card&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
     &lt;/div&gt;
-  &lt;/div&gt;
 &lt;/div&gt;
 </code></pre>
     </div>
@@ -605,8 +658,8 @@ export class DoctorsComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="container">  <div class="row">    <div class="col-md-12">      <p>Doctors</p>    </div>  </div></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppointmentsComponent', 'selector': 'app-appointments'},{'name': 'DoctorsComponent', 'selector': 'app-doctors'},{'name': 'HospitalsComponent', 'selector': 'app-hospitals'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'PatientsComponent', 'selector': 'app-patients'}];
+        var COMPONENT_TEMPLATE = '<div><mat-toolbar>    Choose your doctor    <mat-form-field class="select-hospitals">        <mat-select placeholder="Select hospitals">            <mat-option>Select hospitals</mat-option>        </mat-select>    </mat-form-field></mat-toolbar><div class="container-fluid appointments-page">    <div class="row appointment-content">        <div class="col-lg-1 col-md-4 col-sm-6 col-xs-6 col-item">            <div class="list-item">                <mat-card>                    <div                        class="time-info"                        color="primary"                    >                        Dr. Noushad                    </div>                    <mat-card-content>                        <img                            mat-card-avatar                            class="header-image"                            src="assets/images/patient.jpg"                        >                        <div class="content-info">MBBS,MD</div>                        <div class="content-info">17 years experience</div>                    </mat-card-content>                    <mat-card-actions>                        <button                            mat-button                            [routerLink]="[\'/schedule\']"                        >                            Select                        </button>                    </mat-card-actions>                </mat-card>            </div>        </div>    </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppointmentsComponent', 'selector': 'app-appointments'},{'name': 'BookingConfirmComponent', 'selector': 'app-booking-confirm'},{'name': 'DoctorsComponent', 'selector': 'app-doctors'},{'name': 'HospitalDetailsComponent', 'selector': 'app-hospital-details'},{'name': 'HospitalsComponent', 'selector': 'app-hospitals'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'PatientsComponent', 'selector': 'app-patients'},{'name': 'ScheduleComponent', 'selector': 'app-schedule'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'DoctorsComponent'};
 </script>

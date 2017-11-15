@@ -91,7 +91,13 @@
                                     <a href="../components/AppointmentsComponent.html" >AppointmentsComponent</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../components/BookingConfirmComponent.html" >BookingConfirmComponent</a>
+                                </li>
+                                <li class="link">
                                     <a href="../components/DoctorsComponent.html" >DoctorsComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/HospitalDetailsComponent.html" >HospitalDetailsComponent</a>
                                 </li>
                                 <li class="link">
                                     <a href="../components/HospitalsComponent.html" >HospitalsComponent</a>
@@ -104,6 +110,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../components/PatientsComponent.html" >PatientsComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/ScheduleComponent.html" >ScheduleComponent</a>
                                 </li>
                         </ul>
                     </li>
@@ -268,7 +277,13 @@
                                            <a href="../components/AppointmentsComponent.html" >AppointmentsComponent</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../components/BookingConfirmComponent.html" >BookingConfirmComponent</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../components/DoctorsComponent.html" >DoctorsComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/HospitalDetailsComponent.html" >HospitalDetailsComponent</a>
                                        </li>
                                        <li class="link">
                                            <a href="../components/HospitalsComponent.html" >HospitalsComponent</a>
@@ -281,6 +296,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../components/PatientsComponent.html" >PatientsComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/ScheduleComponent.html" >ScheduleComponent</a>
                                        </li>
                                </ul>
                            </li>
@@ -649,28 +667,39 @@ export class LoginComponent implements OnInit {
     <div class="tab-pane fade" id="templateData">
         <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;main-div&quot;&gt;
   &lt;div class&#x3D;&quot;form&quot;&gt;
-      &lt;div class&#x3D;&quot;col-xs-12&quot;&gt;
-          &lt;img class&#x3D;&quot;img-responsive&quot; src&#x3D;&quot;&quot; alt&#x3D;&quot;Logo&quot;&gt;
-      &lt;/div&gt;
-      &lt;div class&#x3D;&quot;info col-xs-12&quot;&gt;
-          &lt;span &gt; Made with &lt;i class&#x3D;&quot;fa fa-heart&quot;&gt;&lt;/i&gt; By &lt;a href&#x3D;&quot;https://Betasquirrel.com&quot; target&#x3D;&quot;_blank&quot;&gt;Betasquirrel&lt;/a&gt;&lt;/span&gt;
-      &lt;/div&gt;
-      &lt;form *ngIf&#x3D;&quot;!loginForm&quot;&gt;
-          &lt;input type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;name&quot; autocomplete&#x3D;&quot;off&quot; /&gt;
-          &lt;input type&#x3D;&quot;password&quot; placeholder&#x3D;&quot;password&quot; autocomplete&#x3D;&quot;off&quot; /&gt;
-          &lt;input type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;email address&quot; autocomplete&#x3D;&quot;off&quot; /&gt;
-          &lt;input type&#x3D;&quot;tel&quot; placeholder&#x3D;&quot;phone no&quot; autocomplete&#x3D;&quot;off&quot; /&gt;
-          &lt;button&gt;create&lt;/button&gt;
-          &lt;p class&#x3D;&quot;message&quot;&gt;Already registered? &lt;span (click)&#x3D;&quot;loginForm &#x3D; !loginForm&quot;&gt;Sign In&lt;/span&gt;&lt;/p&gt;
-      &lt;/form&gt;
-      &lt;form *ngIf&#x3D;&quot;loginForm&quot; class&#x3D;&quot;login-form&quot; autocomplete&#x3D;&quot;off&quot;&gt;
-          &lt;input type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;user name&quot; ng-model&#x3D;&quot;loginUser.email&quot; /&gt;
-          &lt;input type&#x3D;&quot;password&quot; placeholder&#x3D;&quot;password&quot; ng-model&#x3D;&quot;loginUser.password&quot; /&gt;
-          &lt;button ng-click&#x3D;&quot;login()&quot;&gt;Login&lt;/button&gt;
-          &lt;p class&#x3D;&quot;message&quot;&gt;Not registered? &lt;span (click)&#x3D;&quot;loginForm &#x3D; !loginForm&quot;&gt;Create an account&lt;/span&gt;&lt;/p&gt;
-      &lt;/form&gt;
+    &lt;div class&#x3D;&quot;col-xs-12&quot;&gt;
+      &lt;img class&#x3D;&quot;img-responsive&quot; src&#x3D;&quot;#&quot; alt&#x3D;&quot;Logo&quot;&gt;
+    &lt;/div&gt;
+    &lt;div class&#x3D;&quot;info col-xs-12&quot;&gt;
+      &lt;span&gt;
+        Made with
+        &lt;i class&#x3D;&quot;fa fa-heart&quot;&gt;&lt;/i&gt;By
+        &lt;a href&#x3D;&quot;http://betasquirrel.com&quot; target&#x3D;&quot;_blank&quot;&gt;betasquirrel&lt;/a&gt;
+      &lt;/span&gt;
+    &lt;/div&gt;
+    &lt;form *ngIf&#x3D;&quot;!loginForm&quot;&gt;
+      &lt;input type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;name&quot; autocomplete&#x3D;&quot;off&quot;&gt;
+      &lt;input type&#x3D;&quot;password&quot; placeholder&#x3D;&quot;password&quot; autocomplete&#x3D;&quot;off&quot;&gt;
+      &lt;input type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;email address&quot; autocomplete&#x3D;&quot;off&quot;&gt;
+      &lt;input type&#x3D;&quot;tel&quot; placeholder&#x3D;&quot;phone no&quot; autocomplete&#x3D;&quot;off&quot;&gt;
+      &lt;button&gt;create&lt;/button&gt;
+      &lt;p class&#x3D;&quot;message&quot;&gt;
+        Already registered?
+        &lt;span (click)&#x3D;&quot;loginForm &#x3D; !loginForm&quot;&gt;Sign In&lt;/span&gt;
+      &lt;/p&gt;
+    &lt;/form&gt;
+    &lt;form *ngIf&#x3D;&quot;loginForm&quot; class&#x3D;&quot;login-form&quot; autocomplete&#x3D;&quot;off&quot;&gt;
+      &lt;input type&#x3D;&quot;text&quot; placeholder&#x3D;&quot;user name&quot; ng-model&#x3D;&quot;loginUser.email&quot;&gt;
+      &lt;input type&#x3D;&quot;password&quot; placeholder&#x3D;&quot;password&quot; ng-model&#x3D;&quot;loginUser.password&quot;&gt;
+      &lt;button (click)&#x3D;&quot;login()&quot;&gt;Login&lt;/button&gt;
+      &lt;p class&#x3D;&quot;message&quot;&gt;
+        Not registered?
+        &lt;span (click)&#x3D;&quot;loginForm &#x3D; !loginForm&quot;&gt;Create an account&lt;/span&gt;
+      &lt;/p&gt;
+    &lt;/form&gt;
   &lt;/div&gt;
-&lt;/div&gt;</code></pre>
+&lt;/div&gt;
+</code></pre>
     </div>
 
     <div class="tab-pane fade" id="tree">
@@ -696,8 +725,8 @@ export class LoginComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="main-div">  <div class="form">      <div class="col-xs-12">          <img class="img-responsive" src="" alt="Logo">      </div>      <div class="info col-xs-12">          <span > Made with <i class="fa fa-heart"></i> By <a href="https://Betasquirrel.com" target="_blank">Betasquirrel</a></span>      </div>      <form *ngIf="!loginForm">          <input type="text" placeholder="name" autocomplete="off" />          <input type="password" placeholder="password" autocomplete="off" />          <input type="text" placeholder="email address" autocomplete="off" />          <input type="tel" placeholder="phone no" autocomplete="off" />          <button>create</button>          <p class="message">Already registered? <span (click)="loginForm = !loginForm">Sign In</span></p>      </form>      <form *ngIf="loginForm" class="login-form" autocomplete="off">          <input type="text" placeholder="user name" ng-model="loginUser.email" />          <input type="password" placeholder="password" ng-model="loginUser.password" />          <button ng-click="login()">Login</button>          <p class="message">Not registered? <span (click)="loginForm = !loginForm">Create an account</span></p>      </form>  </div></div></div>'
-    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppointmentsComponent', 'selector': 'app-appointments'},{'name': 'DoctorsComponent', 'selector': 'app-doctors'},{'name': 'HospitalsComponent', 'selector': 'app-hospitals'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'PatientsComponent', 'selector': 'app-patients'}];
+        var COMPONENT_TEMPLATE = '<div><div class="main-div">  <div class="form">    <div class="col-xs-12">      <img class="img-responsive" src="#" alt="Logo">    </div>    <div class="info col-xs-12">      <span>        Made with        <i class="fa fa-heart"></i>By        <a href="http://betasquirrel.com" target="_blank">betasquirrel</a>      </span>    </div>    <form *ngIf="!loginForm">      <input type="text" placeholder="name" autocomplete="off">      <input type="password" placeholder="password" autocomplete="off">      <input type="text" placeholder="email address" autocomplete="off">      <input type="tel" placeholder="phone no" autocomplete="off">      <button>create</button>      <p class="message">        Already registered?        <span (click)="loginForm = !loginForm">Sign In</span>      </p>    </form>    <form *ngIf="loginForm" class="login-form" autocomplete="off">      <input type="text" placeholder="user name" ng-model="loginUser.email">      <input type="password" placeholder="password" ng-model="loginUser.password">      <button (click)="login()">Login</button>      <p class="message">        Not registered?        <span (click)="loginForm = !loginForm">Create an account</span>      </p>    </form>  </div></div></div>'
+    var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppointmentsComponent', 'selector': 'app-appointments'},{'name': 'BookingConfirmComponent', 'selector': 'app-booking-confirm'},{'name': 'DoctorsComponent', 'selector': 'app-doctors'},{'name': 'HospitalDetailsComponent', 'selector': 'app-hospital-details'},{'name': 'HospitalsComponent', 'selector': 'app-hospitals'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'PatientsComponent', 'selector': 'app-patients'},{'name': 'ScheduleComponent', 'selector': 'app-schedule'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'LoginComponent'};
 </script>

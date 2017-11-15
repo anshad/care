@@ -17,7 +17,7 @@ export class AppointmentsComponent implements OnInit {
 
     // For example initialize to specific date (09.10.2018 - 19.10.2018). It is also possible
     // to set initial date range value using the selDateRange attribute.
-    private model: any = {
+    model: any = {
         beginDate: { year: 2018, month: 10, day: 9 },
         endDate: { year: 2018, month: 10, day: 19 }
     };

@@ -4,6 +4,8 @@ A patient/hospital portal generated with [Angular CLI](https://github.com/angula
 
 ![build](https://travis-ci.org/anshad/care.svg?branch=master)
 
+[Visit Online](https://care-e23b8.firebaseapp.com)
+
 ## Commands
 
 * Run development server - `ng serve -o`
