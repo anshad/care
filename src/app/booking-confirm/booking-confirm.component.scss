@@ -1,34 +1,29 @@
 @import '../../styles';
-body {
+.confirm-page {
     background-color: $tuna;
     color: $white;
     font-family: $montserrat-font;
-}
-
-p {
-    font-family: $open-font;
-    margin: 0;
-    font-size: 1.5rem;
-    line-height: 1.8;
-    color: darken($athens-gray, 10%);
-    font-weight: $normal;
-    text-align: center;
-}
-
-h1 {
-    font-size: 3rem;
-    color: $white;
-    font-family: $montserrat-font;
-    font-weight: $normal; //text-transform: uppercase;
-    line-height: 1;
-    margin: 0 0 1.5rem 0;
-    text-align: center;
-}
-
-.container {
-    height: 80vh;
+    height: 85vh;
     align-items: center;
     justify-content: center;
     display: flex;
     overflow: hidden;
+    p {
+        font-family: $open-font;
+        margin: 0;
+        font-size: 1.5rem;
+        line-height: 1.8;
+        color: darken($athens-gray, 10%);
+        font-weight: $normal;
+        text-align: center;
+    }
+    h1 {
+        font-size: 3rem;
+        color: $white;
+        font-family: $montserrat-font;
+        font-weight: $normal; //text-transform: uppercase;
+        line-height: 1;
+        margin: 0 0 1.5rem 0;
+        text-align: center;
+    }
 }

@@ -75,6 +75,13 @@ export class HospitalsComponent implements OnInit {
     }
 
     /**
+     * Load single hospital docters list
+     */
+    getDoctors() {
+        this.router.navigate(['/doctors']);
+    }
+
+    /**
      * Get hospital list with key
      */
     getHospitalListWithKey() {
