@@ -1,100 +1,61 @@
 <!-- filter header -->
 <div class="filter-bar">
-    <!-- filters -->
-    <form>
-        <!-- department filter -->
-        <mat-form-field>
-            <input
-                type="text"
-                placeholder="Filter by department"
-                aria-label="Place"
-                matInput
-                [formControl]="myControl"
-                [matAutocomplete]="auto"
-            >
-            <mat-autocomplete #auto="matAutocomplete">
-                <!-- (optionSelected)="filterByLocation()" -->
-                <mat-option
-                    *ngFor="let place of places"
-                    [value]="place"
-                    (onSelectionChange)="filterByLocation(place)"
-                >
-                    {{ place }}
-                </mat-option>
-            </mat-autocomplete>
-        </mat-form-field>
-        <!-- location filter -->
-        <mat-form-field>
-            <input
-                type="text"
-                placeholder="Filter by location"
-                aria-label="Place"
-                matInput
-                [formControl]="myControl"
-                [matAutocomplete]="auto"
-            >
-            <mat-autocomplete #auto="matAutocomplete">
-                <!-- (optionSelected)="someFn()" -->
-                <mat-option
-                    *ngFor="let place of places"
-                    [value]="place"
-                    (onSelectionChange)="filterByLocation(place)"
-                >
-                    {{ place }}
-                </mat-option>
-            </mat-autocomplete>
-        </mat-form-field>
-    </form>
+  <!-- filters -->
+  <form>
+    <!-- department filter -->
+    <mat-form-field>
+      <input type="text" placeholder="Filter by department" aria-label="Place" matInput [formControl]="myControl" [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete">
+        <!-- (optionSelected)="filterByLocation()" -->
+        <mat-option *ngFor="let place of places" [value]="place" (onSelectionChange)="filterByLocation(place)">
+          {{ place }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+    <!-- location filter -->
+    <mat-form-field>
+      <input type="text" placeholder="Filter by location" aria-label="Place" matInput [formControl]="myControl" [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete">
+        <!-- (optionSelected)="someFn()" -->
+        <mat-option *ngFor="let place of places" [value]="place" (onSelectionChange)="filterByLocation(place)">
+          {{ place }}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+  </form>
 </div>
 <!-- contents -->
 <div class="container">
-    <div class="row">
-        <!-- hospital cards -->
-        <div
-            *ngFor="let hospital of hospitals"
-            class="col-md-3"
-        >
-            <mat-card>
-                <mat-card-header>
-                    <mat-card-title>{{ hospital.name }}</mat-card-title>
-                    <mat-card-subtitle>{{ hospital.place }}</mat-card-subtitle>
-                </mat-card-header>
-                <img
-                    mat-card-image
-                    src="http://via.placeholder.com/350x150"
-                    alt="{{ hospital.name }}"
-                >
-                <mat-card-content>
-                    <address>
-                        <p>{{ hospital.landmark }}</p>
-                        <p>{{ hospital.place }}</p>
-                        <p>{{ hospital.district }}</p>
-                        <p>
-                            {{ hospital.state }}
-                            <span *ngIf="hospital.postalCode">-</span>
-                            {{ hospital.postalCode }}
-                        </p>
-                    </address>
-                </mat-card-content>
-                <mat-card-actions>
-                    <a
-                        mat-button
-                        color="primary"
-                        routerLink="."
-                        (click)="loadHospitalDetails(hospital)"
-                    >
-                        Details
-                    </a>
-                    <a
-                        mat-button
-                        color="primary"
-                        class="pull-right"
-                        routerLink="."
-                    >
-                        Doctors
-                    </a>
-                </mat-card-actions>
-            </mat-card>
-        </div>
+  <div class="row">
+    <!-- hospital cards -->
+    <div *ngFor="let hospital of hospitals" class="col-md-3">
+      <mat-card>
+        <mat-card-header>
+          <mat-card-title>{{ hospital.name }}</mat-card-title>
+          <mat-card-subtitle>{{ hospital.place }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="http://via.placeholder.com/350x150" alt="{{ hospital.name }}">
+        <mat-card-content>
+          <address>
+            <p>{{ hospital.landmark }}</p>
+            <p>{{ hospital.place }}</p>
+            <p>{{ hospital.district }}</p>
+            <p>
+              {{ hospital.state }}
+              <span *ngIf="hospital.postalCode">-</span>
+              {{ hospital.postalCode }}
+            </p>
+          </address>
+        </mat-card-content>
+        <mat-card-actions>
+          <a mat-button color="primary" routerLink="." (click)="loadHospitalDetails(hospital)">
+            Details
+          </a>
+          <a mat-button color="primary" class="pull-right" routerLink=".">
+            Doctors
+          </a>
+        </mat-card-actions>
+      </mat-card>
     </div>
+  </div>
 </div>

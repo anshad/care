@@ -3,6 +3,7 @@ import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { FormControl } from '@angular/forms';
 import { AngularFireDatabase, AngularFireList } from 'angularfire2/database';
 import { Observable } from 'rxjs/Observable';
+import { Router } from '@angular/router';
 
 /**
  * Hospital component
@@ -34,7 +35,10 @@ export class HospitalsComponent implements OnInit {
      * Component constructor
      * @param hospitalsService
      */
-    constructor(private hospitalsService: HospitalsService) {}
+    constructor(
+        private hospitalsService: HospitalsService,
+        private router: Router
+    ) { }
 
     /**
      * Initialize component
@@ -67,6 +71,7 @@ export class HospitalsComponent implements OnInit {
      */
     loadHospitalDetails(hospital) {
         console.log(hospital);
+        this.router.navigate(['/hospital-details']);
     }
 
     /**

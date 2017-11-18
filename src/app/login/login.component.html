@@ -16,16 +16,22 @@
       <input type="password" placeholder="password" autocomplete="off">
       <input type="text" placeholder="email address" autocomplete="off">
       <input type="tel" placeholder="phone no" autocomplete="off">
-      <button>create</button>
+      <button (click)="createUser()">create</button>
       <p class="message">
         Already registered?
         <span (click)="loginForm = !loginForm">Sign In</span>
       </p>
     </form>
     <form *ngIf="loginForm" class="login-form" autocomplete="off">
-      <input type="text" placeholder="E-mail" ng-model="loginUser.email">
-      <input type="password" placeholder="password" ng-model="loginUser.password">
-      <button (click)="login()">Login</button>
+      <div *ngIf="!otpEnabled">
+        <input type="text" placeholder="E-mail" ng-model="loginUser.email">
+        <input type="password" placeholder="password" ng-model="loginUser.password">
+      </div>
+      <div *ngIf="otpEnabled">
+       <input type="text" placeholder="OTP" ng-model="loginUser.otp">
+      </div>
+      <button *ngIf="!otpEnabled" (click)="createOtp()">Login</button>
+      <button *ngIf="otpEnabled" (click)="login()">Login</button>
       <p class="message">
         Not registered?
         <span (click)="loginForm = !loginForm">Create an account</span>
