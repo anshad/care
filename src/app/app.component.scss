@@ -6,6 +6,11 @@
     .logo-container {
         width: 20%;
         float: left;
+        .logo {
+            &:hover {
+                cursor: pointer;
+            }
+        }
     }
     .nav-container {
         width: 80%;
