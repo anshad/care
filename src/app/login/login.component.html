@@ -1,41 +1,56 @@
 <div class="main-div">
   <div class="form">
-    <div class="col-xs-12">
-      <img class="img-responsive" src="#" alt="Logo">
-    </div>
-    <div class="info col-xs-12">
-      <span>
-        Made with
-        <i class="fa fa-heart"></i>
-        By
-        <a href="http://betasquirrel.com" target="_blank">betasquirrel</a>
-      </span>
-    </div>
-    <form *ngIf="!loginForm">
-      <input type="text" placeholder="name" autocomplete="off">
-      <input type="password" placeholder="password" autocomplete="off">
-      <input type="text" placeholder="email address" autocomplete="off">
-      <input type="tel" placeholder="phone no" autocomplete="off">
-      <button (click)="createUser()">create</button>
-      <p class="message">
-        Already registered?
-        <span (click)="loginForm = !loginForm">Sign In</span>
-      </p>
-    </form>
-    <form *ngIf="loginForm" class="login-form" autocomplete="off">
-      <div *ngIf="!otpEnabled">
-        <input type="text" placeholder="E-mail" ng-model="loginUser.email">
-        <input type="password" placeholder="password" ng-model="loginUser.password">
+    <mat-card>
+
+      <div class="love col-xs-12">
+        <span>
+          Made in
+          <i class="fa fa-heart"></i>
+          with
+          <a href="http://betasquirrel.com" target="_blank">
+            betasquirrel
+          </a>
+        </span>
       </div>
-      <div *ngIf="otpEnabled">
-       <input type="text" placeholder="OTP" ng-model="loginUser.otp">
-      </div>
-      <button *ngIf="!otpEnabled" (click)="createOtp()">Login</button>
-      <button *ngIf="otpEnabled" (click)="login()">Login</button>
-      <p class="message">
-        Not registered?
-        <span (click)="loginForm = !loginForm">Create an account</span>
-      </p>
-    </form>
+      <!-- register form -->
+      <form *ngIf="!loginForm">
+        <input type="text" placeholder="Full Name" autocomplete="off">
+        <input type="password" placeholder="Password" autocomplete="off">
+        <input type="text" placeholder="E-mail" autocomplete="off">
+        <input type="tel" placeholder="Mobile" autocomplete="off">
+        <button (click)="createUser()">create</button>
+        <p class="message">
+          Already registered?
+          <span (click)="registerUser()">Sign In</span>
+        </p>
+      </form>
+      <!-- /register form -->
+      <!-- login form -->
+      <form *ngIf="loginForm" class="login-form" autocomplete="off">
+        <div *ngIf="!otpEnabled">
+          <mat-form-field>
+            <input matInput placeholder="Mobile">
+          </mat-form-field>
+          <mat-form-field>
+            <input matInput placeholder="Password">
+          </mat-form-field>
+          <!-- <input type="text" placeholder="Mobile" ng-model="loginUser.mobile">
+        <input type="password" placeholder="Password" ng-model="loginUser.password"> -->
+        </div>
+        <div *ngIf="otpEnabled">
+          <input type="text" placeholder="OTP" ng-model="loginUser.otp">
+        </div>
+        <button mat-raised-button color="primary" *ngIf="!otpEnabled" (click)="createOtp()">Login</button>
+        <button *ngIf="otpEnabled" (click)="login()">
+          Login
+        </button>
+        <p class="message">
+          Not registered?
+          <span (click)="loginForm = !loginForm">Create an account</span>
+        </p>
+      </form>
+      <!-- /login form -->
+    </mat-card>
+
   </div>
 </div>
