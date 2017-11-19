@@ -2,46 +2,48 @@
   <div class="row schedule-content">
     <div class="col-md-4"></div>
     <div class="col-md-4 form-content">
-      <div class="row">
-        <mat-form-field class="select-hospitals col-12">
-          <mat-select placeholder="Selected hospitals">
-            <mat-option>Selected hospitals</mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
-      <div class="row">
-        <mat-form-field class="select-hospitals col-12">
-          <mat-select placeholder="Selected Department">
-            <mat-option>Selected Department</mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
-      <div class="row">
-        <mat-form-field class="select-hospitals col-12">
-          <mat-select placeholder="Selected Doctor">
-            <mat-option>Selected Doctor</mat-option>
-          </mat-select>
-        </mat-form-field>
-      </div>
-      <div class="row">
-        <mat-form-field class="col-12">
-          <input matInput placeholder="Name of Patient">
-        </mat-form-field>
-      </div>
-      <div class="row">
-        <mat-form-field class="col-12">
-          <input matInput [matDatepicker]="dp" placeholder="Date of appointment" [formControl]="date">
-          <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
-          <mat-datepicker #dp></mat-datepicker>
-        </mat-form-field>
-      </div>
-      <div class="row schedule-action">
-        <div class="col-2"></div>
-        <div class="col-8">
-          <button [routerLink]="['/booking-confirmation']">Make an appointment</button>
+      <mat-card>
+        <div class="row">
+          <mat-form-field class="select-hospitals col-12">
+            <mat-select placeholder="Selected hospitals">
+              <mat-option>Selected hospitals</mat-option>
+            </mat-select>
+          </mat-form-field>
         </div>
-        <div class="col-2"></div>
-      </div>
+        <div class="row">
+          <mat-form-field class="select-hospitals col-12">
+            <mat-select placeholder="Selected Department">
+              <mat-option>Selected Department</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="row">
+          <mat-form-field class="select-hospitals col-12">
+            <mat-select placeholder="Selected Doctor">
+              <mat-option>Selected Doctor</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+        <div class="row">
+          <mat-form-field class="col-12">
+            <input matInput placeholder="Name of Patient">
+          </mat-form-field>
+        </div>
+        <div class="row">
+          <mat-form-field class="col-12">
+            <input matInput [matDatepicker]="dp" placeholder="Date of appointment" [formControl]="date">
+            <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+            <mat-datepicker #dp></mat-datepicker>
+          </mat-form-field>
+        </div>
+        <div class="row schedule-action">
+          <div class="col-2"></div>
+          <div class="col-8">
+            <button [routerLink]="['/booking-confirmation']">Make an appointment</button>
+          </div>
+          <div class="col-2"></div>
+        </div>
+      </mat-card>
     </div>
     <div class="col-md-4"></div>
   </div>
