@@ -12,27 +12,39 @@
         </span>
       </div>
       <!-- register form -->
-      <form novalidate *ngIf="!loginForm" [formGroup]="registerFormGrp">
-        <!-- name -->
-        <mat-form-field>
-          <input matInput placeholder="Full Name" formControlName="fullName">
-        </mat-form-field>
-        <!-- email -->
-        <mat-form-field>
-          <input matInput type="email" placeholder="E-mail" formControlName="email">
-        </mat-form-field>
-        <!-- mobile -->
-        <mat-form-field>
-          <input matInput type="tel" placeholder="Mobile" formControlName="mobile">
-        </mat-form-field>
-        <!-- password -->
-        <mat-form-field>
-          <input matInput type="password" placeholder="Password" formControlName="password">
-        </mat-form-field>
-        <!-- submit -->
-        <button (click)="registerUser()" mat-raised-button color="primary">
-          Register
-        </button>
+      <form *ngIf="!loginForm" [formGroup]="registerFormGrp">
+        <div *ngIf="!otpEnabled">
+          <!-- name -->
+          <mat-form-field>
+            <input matInput placeholder="Full Name" formControlName="fullName" required>
+          </mat-form-field>
+          <!-- email -->
+          <mat-form-field>
+            <input matInput type="email" placeholder="E-mail" formControlName="email" required>
+          </mat-form-field>
+          <!-- mobile -->
+          <mat-form-field>
+            <input matInput type="tel" placeholder="Mobile" formControlName="mobile" required minlength="10" maxlength="10">
+          </mat-form-field>
+          <!-- password -->
+          <mat-form-field>
+            <input matInput type="password" placeholder="Password" formControlName="password" required>
+          </mat-form-field>
+          <!-- submit -->
+          <button (click)="registerUser()" mat-raised-button color="primary">
+            Register
+          </button>
+        </div>
+        <div [hidden]="!otpEnabled">
+          <div id="recaptcha-container"></div>
+          <mat-form-field>
+            <input matInput placeholder="OTP" formControlName="otp">
+          </mat-form-field>
+          <!-- submit -->
+          <button (click)="verifyUser()" mat-raised-button color="primary">
+            Verify
+          </button>
+        </div>
         <!-- links -->
         <p class="message">
           Already registered?
@@ -52,11 +64,6 @@
           <button mat-raised-button color="primary" (click)="createOtp()">
             Login
           </button>
-        </div>
-        <div *ngIf="otpEnabled">
-          <mat-form-field>
-            <input matInput placeholder="OTP">
-          </mat-form-field>
         </div>
         <button *ngIf="otpEnabled" (click)="login()">
           Login

@@ -3,24 +3,18 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans');
 @import '~bootstrap/dist/css/bootstrap.min.css';
 @import '~font-awesome/css/font-awesome.css';
+@import '~ng2-toastr/bundles/ng2-toastr.min.css';
+
 // colors
 $white: #ffffff;
 $tuna: #1f222e;
 $athens-gray: #f2f3f7;
 $primary: #6a4eb7;
 // font family
-$montserrat-font: Montserrat,
-'Helvetica Neue',
-'Lucida Grande',
-Arial,
-Verdana,
-sans-serif;
-$open-font: 'Open Sans',
-'Helvetica Neue',
-'Lucida Grande',
-Arial,
-Verdana,
-sans-serif;
+$montserrat-font: Montserrat, 'Helvetica Neue', 'Lucida Grande', Arial, Verdana,
+    sans-serif;
+$open-font: 'Open Sans', 'Helvetica Neue', 'Lucida Grande', Arial, Verdana,
+    sans-serif;
 // font weight
 $slim: 100;
 $light: 300;
@@ -58,4 +52,7 @@ app-root {
     mat-option {
         font-size: 14px;
     }
+}
+[hidden] {
+    display: none !important;
 }

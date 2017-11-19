@@ -1,10 +1,12 @@
-import { AngularFireDatabaseModule } from 'angularfire2/database-deprecated';
+import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { BrowserModule } from '@angular/platform-browser';
 import { MyDateRangePickerModule } from 'mydaterangepicker';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { ToastModule } from 'ng2-toastr/ng2-toastr';
+
 import {
     MatToolbarModule,
     MatInputModule,
@@ -23,12 +25,13 @@ import {
     MatButtonModule,
     MatIconModule,
     MatTableModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSnackBarModule
 } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { AngularFireModule } from 'angularfire2';
-import { AngularFirestoreModule } from 'angularfire2/firestore';
+// import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { environment } from '../environments/environment';
 import { PatientsComponent } from './patients/patients.component';
@@ -62,7 +65,6 @@ import { MatMomentDateModule } from '@angular/material-moment-adapter';
         FormsModule,
         ReactiveFormsModule,
         AngularFireModule.initializeApp(environment.firebase),
-        AngularFirestoreModule,
         AngularFireAuthModule,
         AngularFireDatabaseModule,
         MatToolbarModule,
@@ -84,7 +86,9 @@ import { MatMomentDateModule } from '@angular/material-moment-adapter';
         MatTableModule,
         MatDialogModule,
         MatMomentDateModule,
-        MyDateRangePickerModule
+        MyDateRangePickerModule,
+        MatSnackBarModule,
+        ToastModule.forRoot()
     ],
     providers: [],
     bootstrap: [AppComponent]
