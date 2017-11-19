@@ -1,42 +1,32 @@
 <mat-toolbar>
-    Choose your doctor
-    <mat-form-field class="select-hospitals">
-        <mat-select placeholder="Select hospitals">
-            <mat-option>Select hospitals</mat-option>
-        </mat-select>
-    </mat-form-field>
+  Choose your doctor
+  <mat-form-field class="select-hospitals">
+    <mat-select placeholder="Select hospitals">
+      <mat-option>Select hospitals</mat-option>
+    </mat-select>
+  </mat-form-field>
 </mat-toolbar>
 <div class="container-fluid appointments-page">
-    <div class="row appointment-content">
-        <div class="col-lg-1 col-md-4 col-sm-6 col-xs-6 col-item">
+  <div class="row appointment-content">
+    <div class="col-lg-1 col-md-4 col-sm-6 col-xs-6 col-item" *ngFor="let doctor of doctors">
 
-            <div class="list-item">
-                <mat-card>
-                    <div
-                        class="time-info"
-                        color="primary"
-                    >
-                        Dr. Noushad
-                    </div>
-                    <mat-card-content>
-                        <img
-                            mat-card-avatar
-                            class="header-image"
-                            src="assets/images/patient.jpg"
-                        >
-                        <div class="content-info">MBBS,MD</div>
-                        <div class="content-info">17 years experience</div>
-                    </mat-card-content>
-                    <mat-card-actions>
-                        <button
-                            mat-button
-                            [routerLink]="['/schedule']"
-                        >
-                            Select
-                        </button>
-                    </mat-card-actions>
-                </mat-card>
-            </div>
-        </div>
+      <div class="list-item">
+        <mat-card>
+          <div class="time-info" color="primary">
+            {{doctor.name}}
+          </div>
+          <mat-card-content>
+            <img mat-card-avatar class="header-image" src="assets/images/patient.jpg">
+            <div class="content-info">{{doctor.degree}}</div>
+            <div class="content-info">{{doctor.experience}} years experience</div>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button [routerLink]="['/schedule']">
+              Select
+            </button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
     </div>
+  </div>
 </div>
