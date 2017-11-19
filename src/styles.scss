@@ -33,8 +33,14 @@ body {
     margin: 0 auto;
 }
 
+html,
+body {
+    height: 100% !important;
+}
+
 app-root {
-    height: 100vh;
+    // height: 100vh;
+    height: 100%;
 }
 
 .container {
