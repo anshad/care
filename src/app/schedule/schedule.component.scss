@@ -1,18 +1,39 @@
-/* Form */
+    /* Form */
 
-@import '../../styles';
-button {
-    outline: 0;
-    background: $primary;
-    border: 0;
-    padding: 6px;
-    border-top-left-radius: 3px;
-    border-top-right-radius: 3px;
-    border-bottom-left-radius: 3px;
-    border-bottom-right-radius: 3px;
-    color: #ffffff;
-    font-size: 14px;
-    -webkit-transition: all 0.3 ease;
-    transition: all 0.3 ease;
-    cursor: pointer;
-}
+    @import '../../styles';
+    .schedule-page {
+        height: 91%; // background-image: url('/assets/images/appoinment.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        .schedule-content {
+            height: 100%;
+            padding: 5% 0;
+            .form-content {
+                padding: 25px;
+                background: gainsboro;
+                .select-hospitals {
+                    display: block;
+                }
+            }
+        }
+        .schedule-action {
+            margin-top: 20px;
+            button {
+                outline: 0;
+                background: $primary;
+                border: 0;
+                padding: 6px;
+                border-top-left-radius: 3px;
+                border-top-right-radius: 3px;
+                border-bottom-left-radius: 3px;
+                border-bottom-right-radius: 3px;
+                color: #ffffff;
+                font-size: 14px;
+                -webkit-transition: all 0.3 ease;
+                transition: all 0.3 ease;
+                cursor: pointer;
+                width: 100%;
+            }
+        }
+    }

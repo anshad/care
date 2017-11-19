@@ -1,5 +1,6 @@
 @import '../styles';
 .app-header {
+    height: 9%;
     .header-container {
         width: 100%;
     }
@@ -30,4 +31,9 @@
             }
         }
     }
+}
+
+.mat-toolbar-row,
+.mat-toolbar-single-row {
+    height: 100%;
 }
