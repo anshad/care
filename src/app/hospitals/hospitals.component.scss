@@ -1,29 +1,31 @@
 @import '../../styles';
-mat-card {
-    margin-bottom: 30px;
-    .mat-card-header-text {
-        margin: 0;
+app-hospitals {
+    mat-card {
+        margin-bottom: 30px;
+        .mat-card-header-text {
+            margin: 0;
+        }
+        .mat-button {
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        border-bottom: 2px solid $primary;
     }
-    .mat-button {
-        &:hover {
-            text-decoration: none;
+
+    address {
+        p {
+            margin-bottom: 5px;
         }
     }
-    border-bottom: 2px solid $primary;
-}
 
-address {
-    p {
-        margin-bottom: 5px;
-    }
-}
-
-form {
-    float: right;
-    text-align: right;
-    mat-form-field {
-        &:first-child {
-            margin-right: 25px;
+    form {
+        float: right;
+        text-align: right;
+        mat-form-field {
+            &:first-child {
+                margin-right: 25px;
+            }
         }
     }
 }

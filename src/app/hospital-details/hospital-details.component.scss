@@ -1,24 +1,26 @@
-.hospital-details {
-    font-size: 14px;
-    .hospital-det-head {
-        color: #ef0ca9;
-    }
-    .doc-img {
-        margin-top: 0 !important;
-    }
-    .mat-list-item-content {
-        padding: 0 !important;
+app-hospital-details {
+    .hospital-details {
         font-size: 14px;
-    }
-    .mat-list .mat-list-item,
-    .mat-nav-list .mat-list-item,
-    .mat-selection-list .mat-list-ite {
-        height: auto !important;
-    }
-    .mat-card-image {
-        width: auto !important;
-    }
-    .mat-card {
-        height: 100% !important;
+        .hospital-det-head {
+            color: #ef0ca9;
+        }
+        .doc-img {
+            margin-top: 0 !important;
+        }
+        .mat-list-item-content {
+            padding: 0 !important;
+            font-size: 14px;
+        }
+        .mat-list .mat-list-item,
+        .mat-nav-list .mat-list-item,
+        .mat-selection-list .mat-list-ite {
+            height: auto !important;
+        }
+        .mat-card-image {
+            width: auto !important;
+        }
+        .mat-card {
+            height: 100% !important;
+        }
     }
 }

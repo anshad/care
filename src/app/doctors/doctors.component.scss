@@ -1,94 +1,96 @@
 @import '../../styles';
-.mat-toolbar {
-    background: #e9e9e9;
-    font-size: 17px;
-    .select-hospitals {
-        position: absolute !important;
-        right: 65px;
-        font-size: 11px;
+app-doctors {
+    .mat-toolbar {
+        background: #e9e9e9;
+        font-size: 17px;
+        .select-hospitals {
+            position: absolute !important;
+            right: 65px;
+            font-size: 11px;
+        }
     }
-}
 
-.mat-toolbar-single-row {
-    height: 50px;
-}
+    .mat-toolbar-single-row {
+        height: 50px;
+    }
 
-.appointments-page {
-    // background: #e9e9e9;
-    @media (min-width: 900px) {
-        .col-lg-1 {
-            max-width: 14.285714285714285714285714285714%;
-            flex: auto;
-        }
-    }
-    .appointment-content {
-        padding: 15px;
-    }
-    .header-image {
-        background-size: cover;
-    }
-    .col-item {
-        padding: 0 5px;
-        padding-bottom: 0;
-        background: $white;
-        .title {
-            text-align: center;
-            font-size: 14px;
-        }
-        .selected {
-            color: $primary;
-        }
-        .day-over {
-            opacity: 0.3;
-        }
-        .no-appointments {
-            background: #e9e9e9;
-            padding: 10px 10px 0 10px;
-        }
-        .list-item {
-            height: 95%;
-            .no-card {
-                font-size: 12px;
-                color: #a19898;
-                text-align: center;
-                padding: 10px;
-                a {
-                    color: $primary;
-                }
+    .appointments-page {
+        // background: #e9e9e9;
+        @media (min-width: 900px) {
+            .col-lg-1 {
+                max-width: 14.285714285714285714285714285714%;
+                flex: auto;
             }
-            .mat-card {
-                margin-bottom: 16px;
-                padding: 0;
+        }
+        .appointment-content {
+            padding: 15px;
+        }
+        .header-image {
+            background-size: cover;
+        }
+        .col-item {
+            padding: 0 5px;
+            padding-bottom: 0;
+            background: $white;
+            .title {
                 text-align: center;
-                border-bottom: 2px solid #6a4eb7;
-                .time-info {
-                    background: $primary;
-                    color: $white;
-                    padding: 2px;
+                font-size: 14px;
+            }
+            .selected {
+                color: $primary;
+            }
+            .day-over {
+                opacity: 0.3;
+            }
+            .no-appointments {
+                background: #e9e9e9;
+                padding: 10px 10px 0 10px;
+            }
+            .list-item {
+                height: 95%;
+                .no-card {
                     font-size: 12px;
-                }
-                .mat-card-content {
-                    margin-bottom: 10px;
-                    margin-top: 10px;
-                    .mat-card-avatar {
-                        height: 60px;
-                        width: 60px;
-                    }
-                    .content-info {
-                        color: #656b6c;
-                        padding-top: 2px; // padding-bottom: 3px;
+                    color: #a19898;
+                    text-align: center;
+                    padding: 10px;
+                    a {
+                        color: $primary;
                     }
                 }
-                .mat-card-actions {
-                    margin: 0;
-                    padding-bottom: 15px;
-                    .mat-button {
-                        margin: 4px;
-                        border: 1px solid #e9e9e9;
-                        line-height: 28px;
-                        color: #656b6c;
-                        padding: 1px 18px;
-                        min-width: 100px;
+                .mat-card {
+                    margin-bottom: 16px;
+                    padding: 0;
+                    text-align: center;
+                    border-bottom: 2px solid #6a4eb7;
+                    .time-info {
+                        background: $primary;
+                        color: $white;
+                        padding: 2px;
+                        font-size: 12px;
+                    }
+                    .mat-card-content {
+                        margin-bottom: 10px;
+                        margin-top: 10px;
+                        .mat-card-avatar {
+                            height: 60px;
+                            width: 60px;
+                        }
+                        .content-info {
+                            color: #656b6c;
+                            padding-top: 2px; // padding-bottom: 3px;
+                        }
+                    }
+                    .mat-card-actions {
+                        margin: 0;
+                        padding-bottom: 15px;
+                        .mat-button {
+                            margin: 4px;
+                            border: 1px solid #e9e9e9;
+                            line-height: 28px;
+                            color: #656b6c;
+                            padding: 1px 18px;
+                            min-width: 100px;
+                        }
                     }
                 }
             }

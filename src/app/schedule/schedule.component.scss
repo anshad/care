@@ -1,6 +1,5 @@
-    /* Form */
-
-    @import '../../styles';
+@import '../../styles';
+app-schedule {
     .schedule-page {
         height: 91%; // background-image: url('/assets/images/appoinment.png');
         background-position: center;
@@ -37,3 +36,4 @@
             }
         }
     }
+}
