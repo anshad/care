@@ -1,24 +1,28 @@
 <div class="main-div">
   <div class="form">
     <mat-card>
-
       <div class="love col-xs-12">
         <span>
           Made in
-          <i class="fa fa-heart"></i>
-          with
-          <a href="http://betasquirrel.com" target="_blank">
-            betasquirrel
-          </a>
+          <i class="fa fa-heart"></i> with
+          <a href="http://betasquirrel.com" target="_blank">betasquirrel</a>
         </span>
       </div>
       <!-- register form -->
       <form *ngIf="!loginForm">
-        <input type="text" placeholder="Full Name" autocomplete="off">
-        <input type="password" placeholder="Password" autocomplete="off">
-        <input type="text" placeholder="E-mail" autocomplete="off">
-        <input type="tel" placeholder="Mobile" autocomplete="off">
-        <button (click)="createUser()">create</button>
+        <mat-form-field>
+          <input matInput placeholder="Full Name">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="email" placeholder="E-mail">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="tel" placeholder="Mobile">
+        </mat-form-field>
+        <mat-form-field>
+          <input matInput type="password" placeholder="Password">
+        </mat-form-field>
+        <button (click)="createUser()" mat-raised-button color="primary">Register</button>
         <p class="message">
           Already registered?
           <span (click)="registerUser()">Sign In</span>
@@ -29,18 +33,18 @@
       <form *ngIf="loginForm" class="login-form" autocomplete="off">
         <div *ngIf="!otpEnabled">
           <mat-form-field>
-            <input matInput placeholder="Mobile">
+            <input matInput placeholder="Mobile" ng-model="loginUser.mobile">
           </mat-form-field>
           <mat-form-field>
-            <input matInput placeholder="Password">
+            <input matInput type="password" placeholder="Password" ng-model="loginUser.password">
           </mat-form-field>
-          <!-- <input type="text" placeholder="Mobile" ng-model="loginUser.mobile">
-        <input type="password" placeholder="Password" ng-model="loginUser.password"> -->
+          <button mat-raised-button color="primary" (click)="createOtp()">Login</button>
         </div>
         <div *ngIf="otpEnabled">
-          <input type="text" placeholder="OTP" ng-model="loginUser.otp">
+          <mat-form-field>
+            <input matInput placeholder="OTP">
+          </mat-form-field>
         </div>
-        <button mat-raised-button color="primary" *ngIf="!otpEnabled" (click)="createOtp()">Login</button>
         <button *ngIf="otpEnabled" (click)="login()">
           Login
         </button>
@@ -51,6 +55,5 @@
       </form>
       <!-- /login form -->
     </mat-card>
-
   </div>
 </div>
