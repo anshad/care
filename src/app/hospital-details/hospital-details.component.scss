@@ -1,8 +1,9 @@
+@import '../../styles';
 app-hospital-details {
     .hospital-details {
         font-size: 14px;
         .hospital-det-head {
-            color: #ef0ca9;
+            color: $primary;
         }
         .doc-img {
             margin-top: 0 !important;
