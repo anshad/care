@@ -130,6 +130,9 @@
                                 id="xs-classes-links"
                             >
                                 <li class="link">
+                                    <a href="../classes/Doctors.html" >Doctors</a>
+                                </li>
+                                <li class="link">
                                     <a href="../classes/Hospital.html" >Hospital</a>
                                 </li>
                         </ul>
@@ -150,6 +153,9 @@
                                     <a href="../injectables/AppointmentsService.html" >AppointmentsService</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../injectables/AuthService.html" >AuthService</a>
+                                </li>
+                                <li class="link">
                                     <a href="../injectables/DoctorsService.html" >DoctorsService</a>
                                 </li>
                                 <li class="link">
@@ -157,6 +163,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../injectables/PatientsService.html" >PatientsService</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../injectables/WindowService.html" >WindowService</a>
                                 </li>
                         </ul>
                     </li>
@@ -316,6 +325,9 @@
                                        id="classes-links"
                    >
                                        <li class="link">
+                                           <a href="../classes/Doctors.html" >Doctors</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../classes/Hospital.html" >Hospital</a>
                                        </li>
                                </ul>
@@ -336,6 +348,9 @@
                                            <a href="../injectables/AppointmentsService.html" >AppointmentsService</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../injectables/AuthService.html" >AuthService</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../injectables/DoctorsService.html" >DoctorsService</a>
                                        </li>
                                        <li class="link">
@@ -343,6 +358,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../injectables/PatientsService.html" >PatientsService</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../injectables/WindowService.html" >WindowService</a>
                                        </li>
                                </ul>
                            </li>
@@ -681,13 +699,15 @@
 
 
     <div class="tab-pane fade tab-source-code" id="source">
-        <pre class="line-numbers"><code class="language-typescript">import { AngularFireDatabaseModule } from &#x27;angularfire2/database-deprecated&#x27;;
+        <pre class="line-numbers"><code class="language-typescript">import { AngularFireDatabaseModule } from &#x27;angularfire2/database&#x27;;
 import { BrowserModule } from &#x27;@angular/platform-browser&#x27;;
 import { MyDateRangePickerModule } from &#x27;mydaterangepicker&#x27;;
 import { NgModule } from &#x27;@angular/core&#x27;;
 import { AppRoutingModule } from &#x27;./app-routing.module&#x27;;
 import { NoopAnimationsModule } from &#x27;@angular/platform-browser/animations&#x27;;
 import { FormsModule, ReactiveFormsModule } from &#x27;@angular/forms&#x27;;
+import { ToastModule } from &#x27;ng2-toastr/ng2-toastr&#x27;;
+
 import {
     MatToolbarModule,
     MatInputModule,
@@ -706,12 +726,13 @@ import {
     MatButtonModule,
     MatIconModule,
     MatTableModule,
-    MatDialogModule
+    MatDialogModule,
+    MatSnackBarModule
 } from &#x27;@angular/material&#x27;;
 
 import { AppComponent } from &#x27;./app.component&#x27;;
 import { AngularFireModule } from &#x27;angularfire2&#x27;;
-import { AngularFirestoreModule } from &#x27;angularfire2/firestore&#x27;;
+// import { AngularFirestoreModule } from &#x27;angularfire2/firestore&#x27;;
 import { AngularFireAuthModule } from &#x27;angularfire2/auth&#x27;;
 import { environment } from &#x27;../environments/environment&#x27;;
 import { PatientsComponent } from &#x27;./patients/patients.component&#x27;;
@@ -745,7 +766,6 @@ import { MatMomentDateModule } from &#x27;@angular/material-moment-adapter&#x27;
         FormsModule,
         ReactiveFormsModule,
         AngularFireModule.initializeApp(environment.firebase),
-        AngularFirestoreModule,
         AngularFireAuthModule,
         AngularFireDatabaseModule,
         MatToolbarModule,
@@ -767,7 +787,9 @@ import { MatMomentDateModule } from &#x27;@angular/material-moment-adapter&#x27;
         MatTableModule,
         MatDialogModule,
         MatMomentDateModule,
-        MyDateRangePickerModule
+        MyDateRangePickerModule,
+        MatSnackBarModule,
+        ToastModule.forRoot()
     ],
     providers: [],
     bootstrap: [AppComponent]

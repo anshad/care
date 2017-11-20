@@ -130,6 +130,9 @@
                                 id="xs-classes-links"
                             >
                                 <li class="link">
+                                    <a href="../classes/Doctors.html" >Doctors</a>
+                                </li>
+                                <li class="link">
                                     <a href="../classes/Hospital.html" >Hospital</a>
                                 </li>
                         </ul>
@@ -150,6 +153,9 @@
                                     <a href="../injectables/AppointmentsService.html" >AppointmentsService</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../injectables/AuthService.html" >AuthService</a>
+                                </li>
+                                <li class="link">
                                     <a href="../injectables/DoctorsService.html" >DoctorsService</a>
                                 </li>
                                 <li class="link">
@@ -157,6 +163,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../injectables/PatientsService.html" >PatientsService</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../injectables/WindowService.html" >WindowService</a>
                                 </li>
                         </ul>
                     </li>
@@ -316,6 +325,9 @@
                                        id="classes-links"
                    >
                                        <li class="link">
+                                           <a href="../classes/Doctors.html" >Doctors</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../classes/Hospital.html" >Hospital</a>
                                        </li>
                                </ul>
@@ -336,6 +348,9 @@
                                            <a href="../injectables/AppointmentsService.html" >AppointmentsService</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../injectables/AuthService.html" >AuthService</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../injectables/DoctorsService.html" >DoctorsService</a>
                                        </li>
                                        <li class="link">
@@ -343,6 +358,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../injectables/PatientsService.html" >PatientsService</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../injectables/WindowService.html" >WindowService</a>
                                        </li>
                                </ul>
                            </li>
@@ -477,7 +495,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                 <a href="#title">title</a>
+                                 <a href="#_router">_router</a>
                             </li>
                         </ul>
                     </td>
@@ -486,6 +504,52 @@
         </table>
     </section>
 
+    <section>
+        <h3 id="constructor">Constructor</h3>
+            <table class="table table-sm table-bordered">
+                <tbody>
+                    <tr>
+                        <td class="col-md-4">
+                            <code>constructor(router: <a href="https://angular.io/docs/ts/latest/api/api/router/Router" target="_blank">Router</a>)</code>
+                        </td>
+                    </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/app.component.ts:12</a></div>
+                                </td>
+                            </tr>
+    
+                    <tr>
+                        <td class="col-md-4">
+                                <div>
+                                        <b>Parameters :</b>
+                                        <table class="params">
+                                            <thead>
+                                                <tr>
+                                                    <td>Name</td>
+                                                    <td>Type</td>
+                                                    <td>Optional</td>
+                                                    <td>Description</td>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                    <tr>
+                                                      <td>router</td>
+                                                      <td>
+                                                                <code><a href="https://angular.io/docs/ts/latest/api/api/router/Router" target="_blank" >Router</a></code>
+                                                      </td>
+                                                      <td>
+                                                      </td>
+                                                      <td></td>
+                                                    </tr>
+                                            </tbody>
+                                        </table>
+                                </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+    </section>
 
 
 
@@ -501,24 +565,19 @@
                 <tbody>
                     <tr>
                         <td class="col-md-4">
-                            <a name="title"></a>
-                            <span class="name"><b> title</b><a href="#title"><span class="fa fa-link"></span></a></span>
+                            <a name="_router"></a>
+                            <span class="name"><b> _router</b><a href="#_router"><span class="fa fa-link"></span></a></span>
                         </td>
                     </tr>
                     <tr>
                         <td class="col-md-4">
-                            <code>title:     <code></code>
+                            <code>_router:     <code></code>
     </code>
                         </td>
                     </tr>
-                        <tr>
-                            <td class="col-md-4">
-                                <i>Default value : </i><code>app</code>
-                            </td>
-                        </tr>
                             <tr>
                                 <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/app.component.ts:9</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="12" class="link-to-prism">src/app/app.component.ts:12</a></div>
                                 </td>
                             </tr>
     
@@ -531,21 +590,30 @@
 
 
     <div class="tab-pane fade tab-source-code" id="source">
-        <pre class="line-numbers"><code class="language-typescript">import { Component } from &#x27;@angular/core&#x27;;
-
+        <pre class="line-numbers"><code class="language-typescript">import { environment } from &#x27;../environments/environment.prod&#x27;;
+import { Router } from &#x27;@angular/router&#x27;;
+import { Component } from &#x27;@angular/core&#x27;;
+import * as firebase from &#x27;firebase&#x27;;
+firebase.initializeApp(environment.firebase);
 @Component({
-  selector: &#x27;app-root&#x27;,
-  templateUrl: &#x27;./app.component.html&#x27;,
-  styleUrls: [&#x27;./app.component.scss&#x27;]
+    selector: &#x27;app-root&#x27;,
+    templateUrl: &#x27;./app.component.html&#x27;,
+    styleUrls: [&#x27;./app.component.scss&#x27;]
 })
 export class AppComponent {
-  title &#x3D; &#x27;app&#x27;;
+    _router;
+    constructor(private router: Router) {
+        this._router &#x3D; router;
+    }
 }
 </code></pre>
     </div>
 
     <div class="tab-pane fade" id="templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;app-header mat-elevation-z6&quot;&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div
+    class&#x3D;&quot;app-header mat-elevation-z6&quot;
+    *ngIf&#x3D;&quot;_router.url !&#x3D; &#x27;/login&#x27;&quot;
+&gt;
     &lt;mat-toolbar color&#x3D;&quot;primary&quot;&gt;
         &lt;div class&#x3D;&quot;header-container&quot;&gt;
             &lt;!-- logo --&gt;
@@ -564,13 +632,13 @@ export class AppComponent {
                         &lt;a [routerLink]&#x3D;&quot;[&#x27;/appointments&#x27;]&quot;&gt;Appointments&lt;/a&gt;
                     &lt;/li&gt;
                     &lt;li&gt;
-                        &lt;a [routerLink]&#x3D;&quot;[&#x27;/patients&#x27;]&quot;&gt;Patients&lt;/a&gt;
-                    &lt;/li&gt;
-                    &lt;li&gt;
                         &lt;a [routerLink]&#x3D;&quot;[&#x27;/hospitals&#x27;]&quot;&gt;Hospitals&lt;/a&gt;
                     &lt;/li&gt;
                     &lt;li&gt;
                         &lt;a [routerLink]&#x3D;&quot;[&#x27;/doctors&#x27;]&quot;&gt;Doctors&lt;/a&gt;
+                    &lt;/li&gt;
+                    &lt;li&gt;
+                        &lt;a [routerLink]&#x3D;&quot;[&#x27;/login&#x27;]&quot;&gt;Login&lt;/a&gt;
                     &lt;/li&gt;
                 &lt;/ul&gt;
             &lt;/div&gt;
@@ -604,7 +672,7 @@ export class AppComponent {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="app-header mat-elevation-z6">    <mat-toolbar color="primary">        <div class="header-container">            <!-- logo -->            <div class="logo-container">                <span                    class="logo"                    [routerLink]="[\'/hospitals\']"                >                    Care                </span>            </div>            <!-- nav menu -->            <div class="nav-container">                <ul class="nav-menus">                    <li>                        <a [routerLink]="[\'/appointments\']">Appointments</a>                    </li>                    <li>                        <a [routerLink]="[\'/patients\']">Patients</a>                    </li>                    <li>                        <a [routerLink]="[\'/hospitals\']">Hospitals</a>                    </li>                    <li>                        <a [routerLink]="[\'/doctors\']">Doctors</a>                    </li>                </ul>            </div>        </div>    </mat-toolbar></div><router-outlet></router-outlet></div>'
+        var COMPONENT_TEMPLATE = '<div><div    class="app-header mat-elevation-z6"    *ngIf="_router.url != \'/login\'">    <mat-toolbar color="primary">        <div class="header-container">            <!-- logo -->            <div class="logo-container">                <span                    class="logo"                    [routerLink]="[\'/hospitals\']"                >                    Care                </span>            </div>            <!-- nav menu -->            <div class="nav-container">                <ul class="nav-menus">                    <li>                        <a [routerLink]="[\'/appointments\']">Appointments</a>                    </li>                    <li>                        <a [routerLink]="[\'/hospitals\']">Hospitals</a>                    </li>                    <li>                        <a [routerLink]="[\'/doctors\']">Doctors</a>                    </li>                    <li>                        <a [routerLink]="[\'/login\']">Login</a>                    </li>                </ul>            </div>        </div>    </mat-toolbar></div><router-outlet></router-outlet></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppointmentsComponent', 'selector': 'app-appointments'},{'name': 'BookingConfirmComponent', 'selector': 'app-booking-confirm'},{'name': 'DoctorsComponent', 'selector': 'app-doctors'},{'name': 'HospitalDetailsComponent', 'selector': 'app-hospital-details'},{'name': 'HospitalsComponent', 'selector': 'app-hospitals'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'PatientsComponent', 'selector': 'app-patients'},{'name': 'ScheduleComponent', 'selector': 'app-schedule'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'AppComponent'};

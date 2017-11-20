@@ -130,6 +130,9 @@
                                 id="xs-classes-links"
                             >
                                 <li class="link">
+                                    <a href="../classes/Doctors.html" >Doctors</a>
+                                </li>
+                                <li class="link">
                                     <a href="../classes/Hospital.html" >Hospital</a>
                                 </li>
                         </ul>
@@ -150,6 +153,9 @@
                                     <a href="../injectables/AppointmentsService.html" >AppointmentsService</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../injectables/AuthService.html" >AuthService</a>
+                                </li>
+                                <li class="link">
                                     <a href="../injectables/DoctorsService.html"  data-type="entity-link" class="active" >DoctorsService</a>
                                 </li>
                                 <li class="link">
@@ -157,6 +163,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../injectables/PatientsService.html" >PatientsService</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../injectables/WindowService.html" >WindowService</a>
                                 </li>
                         </ul>
                     </li>
@@ -316,6 +325,9 @@
                                        id="classes-links"
                    >
                                        <li class="link">
+                                           <a href="../classes/Doctors.html" >Doctors</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../classes/Hospital.html" >Hospital</a>
                                        </li>
                                </ul>
@@ -336,6 +348,9 @@
                                            <a href="../injectables/AppointmentsService.html" >AppointmentsService</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../injectables/AuthService.html" >AuthService</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../injectables/DoctorsService.html"  data-type="entity-link" class="active" >DoctorsService</a>
                                        </li>
                                        <li class="link">
@@ -343,6 +358,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../injectables/PatientsService.html" >PatientsService</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../injectables/WindowService.html" >WindowService</a>
                                        </li>
                                </ul>
                            </li>
@@ -419,8 +437,71 @@
             <code>src/app/doctors/doctors.service.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Doctors service or db adapter</p>
+
+            </p>
 
 
+            <section>
+                <h3 id="index">Index</h3>
+                <table class="table table-sm table-bordered index-table">
+                    <tbody>
+                        <tr>
+                            <td class="col-md-4">
+                                <h6><b>Properties</b></h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <ul class="index-list">
+                                    <li>
+                                         <a href="#doctorsRef">doctorsRef</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <h6><b>Methods</b></h6>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <ul class="index-list">
+                                    <li>
+                                         <a href="#addDoctor">addDoctor</a>
+                                    </li>
+                                    <li>
+                                         <a href="#deleteAllDoctorss">deleteAllDoctorss</a>
+                                    </li>
+                                    <li>
+                                         <a href="#deleteDoctor">deleteDoctor</a>
+                                    </li>
+                                    <li>
+                                         <a href="#filterBy">filterBy</a>
+                                    </li>
+                                    <li>
+                                         <a href="#getDoctors">getDoctors</a>
+                                    </li>
+                                    <li>
+                                         <a href="#getDoctorsRef">getDoctorsRef</a>
+                                    </li>
+                                    <li>
+                                         <a href="#getKeyedList">getKeyedList</a>
+                                    </li>
+                                    <li>
+                                         <a href="#updateHospital">updateHospital</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
 
             <section>
                 <h3 id="constructor">Constructor</h3>
@@ -428,17 +509,19 @@
                         <tbody>
                             <tr>
                                 <td class="col-md-4">
-                                    <code>constructor(http: <a href="https://angular.io/docs/ts/latest/api/api/http/Http" target="_blank">Http</a>)</code>
+                                    <code>constructor(db: AngularFireDatabase)</code>
                                 </td>
                             </tr>
                                     <tr>
                                         <td class="col-md-4">
-                                            <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">src/app/doctors/doctors.service.ts:7</a></div>
+                                            <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/doctors/doctors.service.ts:24</a></div>
                                         </td>
                                     </tr>
             
                             <tr>
                                 <td class="col-md-4">
+                                        <div class="io-description"><p>Doctors service constructor</p>
+            </div>
                                         <div>
                                                 <b>Parameters :</b>
                                                 <table class="params">
@@ -452,9 +535,9 @@
                                                     </thead>
                                                     <tbody>
                                                             <tr>
-                                                              <td>http</td>
+                                                              <td>db</td>
                                                               <td>
-                                                                        <code><a href="https://angular.io/docs/ts/latest/api/api/http/Http" target="_blank" >Http</a></code>
+                                                                        <code>AngularFireDatabase</code>
                                                               </td>
                                                               <td>
                                                               </td>
@@ -469,20 +552,676 @@
                     </table>
             </section>
 
+            <section>
+                
+                    <h3 id="methods">
+                        Methods
+                    </h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="addDoctor"></a>
+                                    <span class="name"><b> addDoctor</b><a href="#addDoctor"><span class="fa fa-link"></span></a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+            <code>addDoctor(name: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, place: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, qualification: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, hospital: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, year_of_experience: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                                </td>
+                            </tr>
+            
+            
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="89" class="link-to-prism">src/app/doctors/doctors.service.ts:89</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Add new doctors</p>
+            </div>
+            
+                                        <div class="io-description">
+                                                <b>Parameters :</b>
+                                                <table class="params">
+                                                    <thead>
+                                                        <tr>
+                                                            <td>Name</td>
+                                                            <td>Type</td>
+                                                            <td>Optional</td>
+                                                            <td>Description</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                            <tr>
+                                                              <td>name</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td><p>name of the doctors</p>
+            </td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>place</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td><p>place</p>
+            </td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>qualification</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td><p>qualification</p>
+            </td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>hospital</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td><p>hospital where doctor working</p>
+            </td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>year_of_experience</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td><p>year of experience</p>
+            </td>
+                                                            </tr>
+                                                    </tbody>
+                                                </table>
+                                        </div>
+                                        <div>
+                                        </div>
+                                        <div class="io-description">
+                                            <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+            
+                                        </div>
+                                            <div class="io-description">
+                                                
+                                            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="deleteAllDoctorss"></a>
+                                    <span class="name"><b> deleteAllDoctorss</b><a href="#deleteAllDoctorss"><span class="fa fa-link"></span></a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+            <code>deleteAllDoctorss()</code>
+                                </td>
+                            </tr>
+            
+            
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="138" class="link-to-prism">src/app/doctors/doctors.service.ts:138</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Remove all doctors</p>
+            </div>
+            
+                                        <div class="io-description">
+                                            <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+            
+                                        </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="deleteDoctor"></a>
+                                    <span class="name"><b> deleteDoctor</b><a href="#deleteDoctor"><span class="fa fa-link"></span></a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+            <code>deleteDoctor(key: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                                </td>
+                            </tr>
+            
+            
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="131" class="link-to-prism">src/app/doctors/doctors.service.ts:131</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Delete Doctor</p>
+            </div>
+            
+                                        <div class="io-description">
+                                                <b>Parameters :</b>
+                                                <table class="params">
+                                                    <thead>
+                                                        <tr>
+                                                            <td>Name</td>
+                                                            <td>Type</td>
+                                                            <td>Optional</td>
+                                                            <td>Description</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                            <tr>
+                                                              <td>key</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td><p>Doctor key</p>
+            </td>
+                                                            </tr>
+                                                    </tbody>
+                                                </table>
+                                        </div>
+                                        <div>
+                                        </div>
+                                        <div class="io-description">
+                                            <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+            
+                                        </div>
+                                            <div class="io-description">
+                                                
+                                            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="filterBy"></a>
+                                    <span class="name"><b> filterBy</b><a href="#filterBy"><span class="fa fa-link"></span></a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+            <code>filterBy(place: string | null)</code>
+                                </td>
+                            </tr>
+            
+            
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="41" class="link-to-prism">src/app/doctors/doctors.service.ts:41</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Filter doctors by a location</p>
+            </div>
+            
+                                        <div class="io-description">
+                                                <b>Parameters :</b>
+                                                <table class="params">
+                                                    <thead>
+                                                        <tr>
+                                                            <td>Name</td>
+                                                            <td>Type</td>
+                                                            <td>Optional</td>
+                                                            <td>Description</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                            <tr>
+                                                              <td>place</td>
+                                                              <td>
+                                                                      <code>string | null</code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td></td>
+                                                            </tr>
+                                                    </tbody>
+                                                </table>
+                                        </div>
+                                        <div>
+                                        </div>
+                                        <div class="io-description">
+                                            <b>Returns : </b>    <code>Observable&lt;any[]&gt;</code>
+            
+                                        </div>
+                                            <div class="io-description">
+                                                
+                                            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="getDoctors"></a>
+                                    <span class="name"><b> getDoctors</b><a href="#getDoctors"><span class="fa fa-link"></span></a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+            <code>getDoctors()</code>
+                                </td>
+                            </tr>
+            
+            
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="56" class="link-to-prism">src/app/doctors/doctors.service.ts:56</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Get doctors list</p>
+            </div>
+            
+                                        <div class="io-description">
+                                            <b>Returns : </b>    <code>Observable&lt;any[]&gt;</code>
+            
+                                        </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="getDoctorsRef"></a>
+                                    <span class="name"><b> getDoctorsRef</b><a href="#getDoctorsRef"><span class="fa fa-link"></span></a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+            <code>getDoctorsRef()</code>
+                                </td>
+                            </tr>
+            
+            
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="63" class="link-to-prism">src/app/doctors/doctors.service.ts:63</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Get doctors db reference</p>
+            </div>
+            
+                                        <div class="io-description">
+                                            <b>Returns : </b>    <code>AngularFireList&lt;any&gt;</code>
+            
+                                        </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="getKeyedList"></a>
+                                    <span class="name"><b> getKeyedList</b><a href="#getKeyedList"><span class="fa fa-link"></span></a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+            <code>getKeyedList()</code>
+                                </td>
+                            </tr>
+            
+            
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="70" class="link-to-prism">src/app/doctors/doctors.service.ts:70</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Get subscribable doctors list with key</p>
+            </div>
+            
+                                        <div class="io-description">
+                                            <b>Returns : </b>    <code>Subscribable&lt;any&gt;</code>
+            
+                                        </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="updateHospital"></a>
+                                    <span class="name"><b> updateHospital</b><a href="#updateHospital"><span class="fa fa-link"></span></a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+            <code>updateHospital(key: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, name: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, place: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, qualification: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, hospital: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>, year_of_experience: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                                </td>
+                            </tr>
+            
+            
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="110" class="link-to-prism">src/app/doctors/doctors.service.ts:110</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Update doctor</p>
+            </div>
+            
+                                        <div class="io-description">
+                                                <b>Parameters :</b>
+                                                <table class="params">
+                                                    <thead>
+                                                        <tr>
+                                                            <td>Name</td>
+                                                            <td>Type</td>
+                                                            <td>Optional</td>
+                                                            <td>Description</td>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                            <tr>
+                                                              <td>key</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td><p>doctor key</p>
+            </td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>name</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td><p>updated name</p>
+            </td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>place</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>qualification</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>hospital</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td></td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td>year_of_experience</td>
+                                                              <td>
+                                                                      <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                                              </td>
+                                                              <td>
+                                                              </td>
+                                                              <td></td>
+                                                            </tr>
+                                                    </tbody>
+                                                </table>
+                                        </div>
+                                        <div>
+                                        </div>
+                                        <div class="io-description">
+                                            <b>Returns : </b>    <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+            
+                                        </div>
+                                            <div class="io-description">
+                                                
+                                            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </section>
 
+            <section>
+                
+                    <h3 id="inputs">
+                        Properties
+                    </h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <a name="doctorsRef"></a>
+                                    <span class="name"><b> doctorsRef</b><a href="#doctorsRef"><span class="fa fa-link"></span></a></span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <code>doctorsRef:     <code>AngularFireList&lt;any&gt;</code>
+            </code>
+                                </td>
+                            </tr>
+                                <tr>
+                                    <td class="col-md-4">
+                                        <i>Type : </i>    <code>AngularFireList&lt;any&gt;</code>
+            
+                                    </td>
+                                </tr>
+                                    <tr>
+                                        <td class="col-md-4">
+                                            <div class="io-line">Defined in <a href="" data-line="24" class="link-to-prism">src/app/doctors/doctors.service.ts:24</a></div>
+                                        </td>
+                                    </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>doctors reference</p>
+            </div>
+                                </td>
+                            </tr>
+            
+                        </tbody>
+                    </table>
+            </section>
 
     </div>
 
 
     <div class="tab-pane fade tab-source-code" id="source">
-        <pre class="line-numbers"><code class="language-typescript">import { environment } from &#x27;./../../environments/environment.prod&#x27;;
+        <pre class="line-numbers"><code class="language-typescript">import { Doctors } from &#x27;./doctors&#x27;;
+// import { environment } from &#x27;./../../environments/environment.prod&#x27;;
 import { Injectable } from &#x27;@angular/core&#x27;;
-import { Observable } from &#x27;rxjs/Observable&#x27;;
-import { Http } from &#x27;@angular/http&#x27;;
+import { Observable, Subscribable } from &#x27;rxjs/Observable&#x27;;
+import { BehaviorSubject } from &#x27;rxjs/BehaviorSubject&#x27;;
+import { Subscription } from &#x27;rxjs/Subscription&#x27;;
+import &#x27;rxjs/add/operator/switchMap&#x27;;
+// import { Http } from &#x27;@angular/http&#x27;;
+import {
+    AngularFireDatabase,
+    AngularFireList,
+    AngularFireAction
+} from &#x27;angularfire2/database&#x27;;
+import * as firebase from &#x27;firebase&#x27;;
 
+/**
+ * Doctors service or db adapter
+ */
 @Injectable()
 export class DoctorsService {
-    constructor(private http: Http) {}
+    /**
+     * doctors reference
+     */
+    doctorsRef: AngularFireList&lt;any&gt;;
+
+    /**
+     * Doctors service constructor
+     * @param db
+     */
+    constructor(private db: AngularFireDatabase) {
+        /**
+         * get doctors db ref
+         */
+        this.doctorsRef &#x3D; this.db.list(&#x27;doctors&#x27;);
+    }
+
+    /**
+     * Filter doctors by a location
+     * @param place
+     */
+    filterBy(place: string | null): Observable&lt;any[]&gt; {
+        return this.db
+            .list(&#x27;/doctors&#x27;, ref &#x3D;&gt; ref.orderByChild(&#x27;place&#x27;).equalTo(place))
+            .snapshotChanges()
+            .map(changes &#x3D;&gt; {
+                return changes.map(c &#x3D;&gt; ({
+                    key: c.payload.key,
+                    ...c.payload.val()
+                }));
+            });
+    }
+
+    /**
+     * Get doctors list
+     */
+    getDoctors(): Observable&lt;any[]&gt; {
+        return this.doctorsRef.valueChanges();
+    }
+
+    /**
+     * Get doctors db reference
+     */
+    getDoctorsRef(): AngularFireList&lt;any&gt; {
+        return this.doctorsRef;
+    }
+
+    /**
+     * Get subscribable doctors list with key
+     */
+    getKeyedList(): Subscribable&lt;any&gt; {
+        return this.getDoctorsRef()
+            .snapshotChanges()
+            .map(changes &#x3D;&gt; {
+                return changes.map(c &#x3D;&gt; ({
+                    key: c.payload.key,
+                    ...c.payload.val()
+                }));
+            });
+    }
+
+    /**
+     * Add new doctors
+     * @param name name of the doctors
+    * @param place place
+    * @param qualification qualification
+    * @param hospital hospital where doctor working
+    * @param year_of_experience year of experience
+     */
+    addDoctor(
+        name: string,
+        place: string,
+        qualification: string,
+        hospital: string,
+        year_of_experience: number
+    ) {
+        this.getDoctorsRef().push({
+            name: name,
+            place: place,
+            qualification: qualification,
+            hospital: hospital,
+            year_of_experience: year_of_experience
+        });
+    }
+
+    /**
+     * Update doctor
+     * @param key doctor key
+     * @param name updated name
+     */
+    updateHospital(
+        key: string,
+        name: string,
+        place: string,
+        qualification: string,
+        hospital: string,
+        year_of_experience: number
+    ) {
+        this.getDoctorsRef().update(key, {
+            name: name,
+            place: place,
+            qualification: qualification,
+            hospital: hospital,
+            year_of_experience: year_of_experience
+        });
+    }
+
+    /**
+     * Delete Doctor
+     * @param key Doctor key
+     */
+    deleteDoctor(key: string) {
+        this.getDoctorsRef().remove(key);
+    }
+
+    /**
+     * Remove all doctors
+     */
+    deleteAllDoctorss() {
+        this.getDoctorsRef().remove();
+    }
 }
 </code></pre>
     </div>

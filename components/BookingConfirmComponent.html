@@ -130,6 +130,9 @@
                                 id="xs-classes-links"
                             >
                                 <li class="link">
+                                    <a href="../classes/Doctors.html" >Doctors</a>
+                                </li>
+                                <li class="link">
                                     <a href="../classes/Hospital.html" >Hospital</a>
                                 </li>
                         </ul>
@@ -150,6 +153,9 @@
                                     <a href="../injectables/AppointmentsService.html" >AppointmentsService</a>
                                 </li>
                                 <li class="link">
+                                    <a href="../injectables/AuthService.html" >AuthService</a>
+                                </li>
+                                <li class="link">
                                     <a href="../injectables/DoctorsService.html" >DoctorsService</a>
                                 </li>
                                 <li class="link">
@@ -157,6 +163,9 @@
                                 </li>
                                 <li class="link">
                                     <a href="../injectables/PatientsService.html" >PatientsService</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../injectables/WindowService.html" >WindowService</a>
                                 </li>
                         </ul>
                     </li>
@@ -316,6 +325,9 @@
                                        id="classes-links"
                    >
                                        <li class="link">
+                                           <a href="../classes/Doctors.html" >Doctors</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../classes/Hospital.html" >Hospital</a>
                                        </li>
                                </ul>
@@ -336,6 +348,9 @@
                                            <a href="../injectables/AppointmentsService.html" >AppointmentsService</a>
                                        </li>
                                        <li class="link">
+                                           <a href="../injectables/AuthService.html" >AuthService</a>
+                                       </li>
+                                       <li class="link">
                                            <a href="../injectables/DoctorsService.html" >DoctorsService</a>
                                        </li>
                                        <li class="link">
@@ -343,6 +358,9 @@
                                        </li>
                                        <li class="link">
                                            <a href="../injectables/PatientsService.html" >PatientsService</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../injectables/WindowService.html" >WindowService</a>
                                        </li>
                                </ul>
                            </li>
@@ -583,13 +601,13 @@ export class BookingConfirmComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade" id="templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container&quot;&gt;
-    &lt;div&gt;
-        &lt;h1&gt;Congrats&lt;/h1&gt;
-        &lt;p&gt;
-            Your booking has been made.we will get in touch with you shortly
-        &lt;/p&gt;
-    &lt;/div&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;div class&#x3D;&quot;container confirm-page&quot;&gt;
+  &lt;div&gt;
+    &lt;h1&gt;Congrats&lt;/h1&gt;
+    &lt;p&gt;
+      Your booking has been made.we will get in touch with you shortly
+    &lt;/p&gt;
+  &lt;/div&gt;
 &lt;/div&gt;
 &lt;!-- &lt;div [fxLayout]&#x3D;&quot;&#x27;row&#x27;&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
   &lt;div [fxLayout]&#x3D;&quot;&#x27;column&#x27;&quot; fxLayoutAlign&#x3D;&quot;center center&quot;&gt;
@@ -625,7 +643,7 @@ export class BookingConfirmComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><div class="container">    <div>        <h1>Congrats</h1>        <p>            Your booking has been made.we will get in touch with you shortly        </p>    </div></div><!-- <div [fxLayout]="\'row\'" fxLayoutAlign="center center">  <div [fxLayout]="\'column\'" fxLayoutAlign="center center">    <div>one</div>    <div>two</div>    <div>three</div>  </div></div> --></div>'
+        var COMPONENT_TEMPLATE = '<div><div class="container confirm-page">  <div>    <h1>Congrats</h1>    <p>      Your booking has been made.we will get in touch with you shortly    </p>  </div></div><!-- <div [fxLayout]="\'row\'" fxLayoutAlign="center center">  <div [fxLayout]="\'column\'" fxLayoutAlign="center center">    <div>one</div>    <div>two</div>    <div>three</div>  </div></div> --></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'AppointmentsComponent', 'selector': 'app-appointments'},{'name': 'BookingConfirmComponent', 'selector': 'app-booking-confirm'},{'name': 'DoctorsComponent', 'selector': 'app-doctors'},{'name': 'HospitalDetailsComponent', 'selector': 'app-hospital-details'},{'name': 'HospitalsComponent', 'selector': 'app-hospitals'},{'name': 'LoginComponent', 'selector': 'app-login'},{'name': 'PageNotFoundComponent', 'selector': 'app-page-not-found'},{'name': 'PatientsComponent', 'selector': 'app-patients'},{'name': 'ScheduleComponent', 'selector': 'app-schedule'}];
     var DIRECTIVES = [];
     var ACTUAL_COMPONENT = {'name': 'BookingConfirmComponent'};
